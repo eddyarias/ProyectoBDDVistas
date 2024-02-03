@@ -74,6 +74,7 @@
             label29 = new Label();
             label30 = new Label();
             dataGridView1 = new DataGridView();
+            label9 = new Label();
             panel1.SuspendLayout();
             TCProveedores.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -155,7 +156,7 @@
             // 
             TCProveedores.Controls.Add(tabPage1);
             TCProveedores.Controls.Add(tabPage7);
-            TCProveedores.Location = new Point(24, 32);
+            TCProveedores.Location = new Point(37, 112);
             TCProveedores.Margin = new Padding(3, 4, 3, 4);
             TCProveedores.Name = "TCProveedores";
             TCProveedores.SelectedIndex = 0;
@@ -216,7 +217,7 @@
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(125, 141);
+            textBox7.Location = new Point(155, 142);
             textBox7.Margin = new Padding(3, 4, 3, 4);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(163, 27);
@@ -234,7 +235,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(6, 148);
+            label7.Location = new Point(6, 142);
             label7.Name = "label7";
             label7.Size = new Size(108, 20);
             label7.TabIndex = 17;
@@ -261,7 +262,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(125, 103);
+            textBox5.Location = new Point(155, 104);
             textBox5.Margin = new Padding(3, 4, 3, 4);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(169, 27);
@@ -269,7 +270,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(125, 64);
+            textBox2.Location = new Point(155, 65);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(169, 27);
@@ -278,7 +279,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(61, 111);
+            label5.Location = new Point(64, 107);
             label5.Name = "label5";
             label5.Size = new Size(50, 20);
             label5.TabIndex = 7;
@@ -303,7 +304,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(20, 79);
+            label2.Location = new Point(21, 68);
             label2.Name = "label2";
             label2.Size = new Size(102, 20);
             label2.TabIndex = 4;
@@ -311,7 +312,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(125, 27);
+            textBox1.Location = new Point(155, 28);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(169, 27);
@@ -320,7 +321,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 33);
+            label1.Location = new Point(0, 34);
             label1.Name = "label1";
             label1.Size = new Size(132, 20);
             label1.TabIndex = 2;
@@ -528,11 +529,22 @@
             dataGridView1.Size = new Size(410, 256);
             dataGridView1.TabIndex = 72;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(12, 45);
+            label9.Name = "label9";
+            label9.Size = new Size(118, 28);
+            label9.TabIndex = 52;
+            label9.Text = "Reparacion";
+            // 
             // Form_Reparacion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1365, 510);
+            Controls.Add(label9);
             Controls.Add(panel1);
             Controls.Add(label37);
             Controls.Add(TCProveedores);
@@ -599,5 +611,6 @@
         private Label label29;
         private Label label30;
         private DataGridView dataGridView1;
+        private Label label9;
     }
 }

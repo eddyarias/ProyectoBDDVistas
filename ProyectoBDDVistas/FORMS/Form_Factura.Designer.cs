@@ -1,6 +1,6 @@
 ﻿namespace ProyectoBDDVistas.FORMS
 {
-    partial class Form_Cliente
+    partial class Form_Factura
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // Form_Cliente
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1373, 667);
-            Name = "Form_Cliente";
-            Text = "Form_Cliente";
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Form_Factura";
         }
 
         #endregion

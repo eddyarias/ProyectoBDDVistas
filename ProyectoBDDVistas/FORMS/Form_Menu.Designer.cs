@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
-            button1 = new Button();
-            button2 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button3 = new Button();
-            panel1 = new Panel();
+            bttEmpleadoMenu = new Button();
+            bttFacturacionMenu = new Button();
+            bttReparacionMenu = new Button();
+            bttVehiculoMenu = new Button();
+            bttClienteMenu = new Button();
             label2 = new Label();
             label1 = new Label();
             panel2.SuspendLayout();
@@ -43,11 +42,11 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(26, 32, 40);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(button3);
+            panel2.Controls.Add(bttEmpleadoMenu);
+            panel2.Controls.Add(bttFacturacionMenu);
+            panel2.Controls.Add(bttReparacionMenu);
+            panel2.Controls.Add(bttVehiculoMenu);
+            panel2.Controls.Add(bttClienteMenu);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(3, 4, 3, 4);
@@ -55,96 +54,90 @@
             panel2.Size = new Size(229, 1033);
             panel2.TabIndex = 27;
             // 
-            // button1
+            // bttEmpleadoMenu
             // 
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 14.25F);
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(0, 392);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(229, 98);
-            button1.TabIndex = 17;
-            button1.Text = "Empleado";
-            button1.UseVisualStyleBackColor = true;
+            bttEmpleadoMenu.Dock = DockStyle.Top;
+            bttEmpleadoMenu.FlatAppearance.BorderSize = 0;
+            bttEmpleadoMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            bttEmpleadoMenu.FlatStyle = FlatStyle.Flat;
+            bttEmpleadoMenu.Font = new Font("Segoe UI", 14.25F);
+            bttEmpleadoMenu.ForeColor = SystemColors.ControlLightLight;
+            bttEmpleadoMenu.Location = new Point(0, 392);
+            bttEmpleadoMenu.Margin = new Padding(3, 4, 3, 4);
+            bttEmpleadoMenu.Name = "bttEmpleadoMenu";
+            bttEmpleadoMenu.Size = new Size(229, 98);
+            bttEmpleadoMenu.TabIndex = 17;
+            bttEmpleadoMenu.Text = "Empleado";
+            bttEmpleadoMenu.UseVisualStyleBackColor = true;
+            bttEmpleadoMenu.Click += bttEmpleadoMenu_Click;
             // 
-            // button2
+            // bttFacturacionMenu
             // 
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 14.25F);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(0, 294);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(229, 98);
-            button2.TabIndex = 18;
-            button2.Text = "Facturacion";
-            button2.UseVisualStyleBackColor = true;
+            bttFacturacionMenu.Dock = DockStyle.Top;
+            bttFacturacionMenu.FlatAppearance.BorderSize = 0;
+            bttFacturacionMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            bttFacturacionMenu.FlatStyle = FlatStyle.Flat;
+            bttFacturacionMenu.Font = new Font("Segoe UI", 14.25F);
+            bttFacturacionMenu.ForeColor = SystemColors.Control;
+            bttFacturacionMenu.Location = new Point(0, 294);
+            bttFacturacionMenu.Margin = new Padding(3, 4, 3, 4);
+            bttFacturacionMenu.Name = "bttFacturacionMenu";
+            bttFacturacionMenu.Size = new Size(229, 98);
+            bttFacturacionMenu.TabIndex = 18;
+            bttFacturacionMenu.Text = "Facturacion";
+            bttFacturacionMenu.UseVisualStyleBackColor = true;
+            bttFacturacionMenu.Click += bttFacturacionMenu_Click;
             // 
-            // button4
+            // bttReparacionMenu
             // 
-            button4.Dock = DockStyle.Top;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 14.25F);
-            button4.ForeColor = SystemColors.Control;
-            button4.Location = new Point(0, 196);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(229, 98);
-            button4.TabIndex = 20;
-            button4.Text = "Reparacion";
-            button4.UseVisualStyleBackColor = true;
+            bttReparacionMenu.Dock = DockStyle.Top;
+            bttReparacionMenu.FlatAppearance.BorderSize = 0;
+            bttReparacionMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            bttReparacionMenu.FlatStyle = FlatStyle.Flat;
+            bttReparacionMenu.Font = new Font("Segoe UI", 14.25F);
+            bttReparacionMenu.ForeColor = SystemColors.Control;
+            bttReparacionMenu.Location = new Point(0, 196);
+            bttReparacionMenu.Margin = new Padding(3, 4, 3, 4);
+            bttReparacionMenu.Name = "bttReparacionMenu";
+            bttReparacionMenu.Size = new Size(229, 98);
+            bttReparacionMenu.TabIndex = 20;
+            bttReparacionMenu.Text = "Reparacion";
+            bttReparacionMenu.UseVisualStyleBackColor = true;
+            bttReparacionMenu.Click += bttReparacionMenu_Click;
             // 
-            // button5
+            // bttVehiculoMenu
             // 
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 14.25F);
-            button5.ForeColor = SystemColors.Control;
-            button5.Location = new Point(0, 98);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(229, 98);
-            button5.TabIndex = 21;
-            button5.Text = "Vehiculo";
-            button5.UseVisualStyleBackColor = true;
+            bttVehiculoMenu.Dock = DockStyle.Top;
+            bttVehiculoMenu.FlatAppearance.BorderSize = 0;
+            bttVehiculoMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            bttVehiculoMenu.FlatStyle = FlatStyle.Flat;
+            bttVehiculoMenu.Font = new Font("Segoe UI", 14.25F);
+            bttVehiculoMenu.ForeColor = SystemColors.Control;
+            bttVehiculoMenu.Location = new Point(0, 98);
+            bttVehiculoMenu.Margin = new Padding(3, 4, 3, 4);
+            bttVehiculoMenu.Name = "bttVehiculoMenu";
+            bttVehiculoMenu.Size = new Size(229, 98);
+            bttVehiculoMenu.TabIndex = 21;
+            bttVehiculoMenu.Text = "Vehiculo";
+            bttVehiculoMenu.UseVisualStyleBackColor = true;
+            bttVehiculoMenu.Click += bttVehiculoMenu_Click;
             // 
-            // button3
+            // bttClienteMenu
             // 
-            button3.Dock = DockStyle.Top;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 14.25F);
-            button3.ForeColor = SystemColors.Control;
-            button3.Location = new Point(0, 0);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(229, 98);
-            button3.TabIndex = 19;
-            button3.Text = "Cliente";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(49, 66, 82);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1924, 1033);
-            panel1.TabIndex = 26;
+            bttClienteMenu.Dock = DockStyle.Top;
+            bttClienteMenu.FlatAppearance.BorderSize = 0;
+            bttClienteMenu.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            bttClienteMenu.FlatStyle = FlatStyle.Flat;
+            bttClienteMenu.Font = new Font("Segoe UI", 14.25F);
+            bttClienteMenu.ForeColor = SystemColors.Control;
+            bttClienteMenu.Location = new Point(0, 0);
+            bttClienteMenu.Margin = new Padding(3, 4, 3, 4);
+            bttClienteMenu.Name = "bttClienteMenu";
+            bttClienteMenu.Size = new Size(229, 98);
+            bttClienteMenu.TabIndex = 19;
+            bttClienteMenu.Text = "Cliente";
+            bttClienteMenu.UseVisualStyleBackColor = true;
+            bttClienteMenu.Click += bttClienteMenu_Click;
             // 
             // label2
             // 
@@ -168,9 +161,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(20, 40, 60);
             ClientSize = new Size(1924, 1033);
             Controls.Add(panel2);
-            Controls.Add(panel1);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Form_Menu";
@@ -183,12 +176,11 @@
         #endregion
 
         private Panel panel2;
-        private Button button1;
-        private Button button2;
-        private Button button4;
-        private Button button5;
-        private Button button3;
-        private Panel panel1;
+        private Button bttEmpleadoMenu;
+        private Button bttFacturacionMenu;
+        private Button bttReparacionMenu;
+        private Button bttVehiculoMenu;
+        private Button bttClienteMenu;
         private Label label2;
         private Label label1;
     }
