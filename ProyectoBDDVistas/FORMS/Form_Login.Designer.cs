@@ -56,7 +56,7 @@
             // 
             BLogin.BackColor = SystemColors.ButtonFace;
             BLogin.Image = (Image)resources.GetObject("BLogin.Image");
-            BLogin.Location = new Point(148, 134);
+            BLogin.Location = new Point(157, 143);
             BLogin.Margin = new Padding(3, 4, 3, 4);
             BLogin.Name = "BLogin";
             BLogin.Size = new Size(190, 69);
