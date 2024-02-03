@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             panel1 = new Panel();
-            CBTipoUsuario = new ComboBox();
             BLogin = new Button();
-            label3 = new Label();
             TBUsername = new TextBox();
             TBPassword = new TextBox();
             label1 = new Label();
@@ -43,33 +41,22 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(CBTipoUsuario);
             panel1.Controls.Add(BLogin);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(TBUsername);
             panel1.Controls.Add(TBPassword);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(108, 48);
+            panel1.Location = new Point(94, 79);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(510, 322);
+            panel1.Size = new Size(492, 247);
             panel1.TabIndex = 7;
-            // 
-            // CBTipoUsuario
-            // 
-            CBTipoUsuario.FormattingEnabled = true;
-            CBTipoUsuario.Items.AddRange(new object[] { "Administrador", "Vendedor" });
-            CBTipoUsuario.Location = new Point(225, 42);
-            CBTipoUsuario.Name = "CBTipoUsuario";
-            CBTipoUsuario.Size = new Size(159, 28);
-            CBTipoUsuario.TabIndex = 1;
             // 
             // BLogin
             // 
             BLogin.BackColor = SystemColors.ButtonFace;
             BLogin.Image = (Image)resources.GetObject("BLogin.Image");
-            BLogin.Location = new Point(194, 219);
+            BLogin.Location = new Point(148, 134);
             BLogin.Margin = new Padding(3, 4, 3, 4);
             BLogin.Name = "BLogin";
             BLogin.Size = new Size(190, 69);
@@ -77,18 +64,9 @@
             BLogin.UseVisualStyleBackColor = false;
             BLogin.Click += BLogin_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(104, 49);
-            label3.Name = "label3";
-            label3.Size = new Size(115, 20);
-            label3.TabIndex = 5;
-            label3.Text = "Tipo de usuario:";
-            // 
             // TBUsername
             // 
-            TBUsername.Location = new Point(225, 90);
+            TBUsername.Location = new Point(198, 51);
             TBUsername.Margin = new Padding(3, 4, 3, 4);
             TBUsername.Name = "TBUsername";
             TBUsername.Size = new Size(159, 27);
@@ -96,7 +74,7 @@
             // 
             // TBPassword
             // 
-            TBPassword.Location = new Point(225, 138);
+            TBPassword.Location = new Point(198, 99);
             TBPassword.Margin = new Padding(3, 4, 3, 4);
             TBPassword.Name = "TBPassword";
             TBPassword.PasswordChar = '*';
@@ -106,7 +84,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(141, 98);
+            label1.Location = new Point(114, 59);
             label1.Name = "label1";
             label1.Size = new Size(78, 20);
             label1.TabIndex = 1;
@@ -115,7 +93,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(146, 145);
+            label2.Location = new Point(119, 106);
             label2.Name = "label2";
             label2.Size = new Size(73, 20);
             label2.TabIndex = 2;
@@ -125,7 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(720, 389);
             Controls.Add(panel1);
             Name = "Form_Login";
             Text = "Login";
@@ -137,8 +115,6 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox CBTipoUsuario;
-        private Label label3;
         private TextBox TBUsername;
         private Button BLogin;
         private TextBox TBPassword;

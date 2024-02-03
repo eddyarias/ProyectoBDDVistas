@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="CLASES\" />
-    <Folder Include="RECURSOS\" />
   </ItemGroup>
 
   <ItemGroup>

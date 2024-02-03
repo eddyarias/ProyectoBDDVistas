@@ -168,6 +168,7 @@
             Controls.Add(label1);
             Name = "Form_Menu";
             Text = "Menú";
+            Load += Form_Menu_Load;
             panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
