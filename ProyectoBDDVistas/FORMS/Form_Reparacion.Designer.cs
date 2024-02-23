@@ -531,13 +531,14 @@
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(12, 45);
+            label9.Dock = DockStyle.Top;
+            label9.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(0, 0);
             label9.Name = "label9";
-            label9.Size = new Size(118, 28);
-            label9.TabIndex = 52;
-            label9.Text = "Reparacion";
+            label9.Size = new Size(1482, 40);
+            label9.TabIndex = 75;
+            label9.Text = "REPARACIÓN";
+            label9.TextAlign = ContentAlignment.TopCenter;
             // 
             // Form_Reparacion
             // 

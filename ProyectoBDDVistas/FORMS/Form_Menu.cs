@@ -35,7 +35,7 @@ namespace ProyectoBDDVistas.FORMS
 
         private void HideAllForms()
         {
-            
+
             form_Cliente.Hide();
             form_Empleado.Hide();
             form_Reparacion.Hide();
@@ -50,7 +50,7 @@ namespace ProyectoBDDVistas.FORMS
             form.Dock = DockStyle.Fill;
             form.ControlBox = false;// Desactiva el cuadro de control que contiene los botones minimizar, maximizar y cerrar
             form.FormBorderStyle = FormBorderStyle.None;// Elimina todos los bordes del formulario
-            
+
 
             return form;
         }
@@ -93,6 +93,11 @@ namespace ProyectoBDDVistas.FORMS
         private void Form_Menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

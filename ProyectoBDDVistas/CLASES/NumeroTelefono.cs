@@ -12,9 +12,6 @@ namespace ProyectoBDDVistas.CLASES
         public string IdEmpleado { get; set; }
         public string IdTaller { get; set; }
 
-        // Constructor sin parámetros
-        public NumeroTelefono() { }
-
         // Constructor con parámetros
         public NumeroTelefono(string numeroTelefonico, string idEmpleado, string idTaller)
         {

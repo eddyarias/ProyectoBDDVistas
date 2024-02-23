@@ -85,12 +85,14 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(650, 42);
+            label1.Dock = DockStyle.Top;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(72, 20);
+            label1.Size = new Size(1482, 40);
             label1.TabIndex = 0;
             label1.Text = "CLIENTES";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // tabControl1
             // 
@@ -561,7 +563,6 @@
             tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

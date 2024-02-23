@@ -83,7 +83,7 @@
             label19 = new Label();
             textBox13 = new TextBox();
             textBox15 = new TextBox();
-            label37 = new Label();
+            label26 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabControl1.SuspendLayout();
@@ -617,26 +617,27 @@
             textBox15.Size = new Size(119, 27);
             textBox15.TabIndex = 109;
             // 
-            // label37
+            // label26
             // 
-            label37.AutoSize = true;
-            label37.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label37.Location = new Point(41, 20);
-            label37.Name = "label37";
-            label37.Size = new Size(78, 20);
-            label37.TabIndex = 84;
-            label37.Text = "Empleado";
+            label26.Dock = DockStyle.Top;
+            label26.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label26.Location = new Point(0, 0);
+            label26.Name = "label26";
+            label26.Size = new Size(1482, 40);
+            label26.TabIndex = 88;
+            label26.Text = "EMPLEADO";
+            label26.TextAlign = ContentAlignment.TopCenter;
             // 
             // Form_Empleado
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
+            Controls.Add(label26);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Controls.Add(tabControl1);
-            Controls.Add(label37);
             Name = "Form_Empleado";
             Text = "FormEmpleado";
             panel1.ResumeLayout(false);
@@ -706,10 +707,10 @@
         private Label label19;
         private TextBox textBox13;
         private TextBox textBox15;
-        private Label label37;
         private Label label11;
         private TextBox textBox11;
         private TextBox textBox7;
         private Label label2;
+        private Label label26;
     }
 }

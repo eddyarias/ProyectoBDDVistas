@@ -36,12 +36,14 @@
             bttClienteMenu = new Button();
             label2 = new Label();
             label1 = new Label();
+            bttSalir = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(26, 32, 40);
+            panel2.Controls.Add(bttSalir);
             panel2.Controls.Add(bttEmpleadoMenu);
             panel2.Controls.Add(bttFacturacionMenu);
             panel2.Controls.Add(bttReparacionMenu);
@@ -157,6 +159,23 @@
             label1.Size = new Size(0, 39);
             label1.TabIndex = 24;
             // 
+            // bttSalir
+            // 
+            bttSalir.Dock = DockStyle.Bottom;
+            bttSalir.FlatAppearance.BorderSize = 0;
+            bttSalir.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            bttSalir.FlatStyle = FlatStyle.Flat;
+            bttSalir.Font = new Font("Segoe UI", 14.25F);
+            bttSalir.ForeColor = SystemColors.ControlLightLight;
+            bttSalir.Location = new Point(0, 935);
+            bttSalir.Margin = new Padding(3, 4, 3, 4);
+            bttSalir.Name = "bttSalir";
+            bttSalir.Size = new Size(229, 98);
+            bttSalir.TabIndex = 22;
+            bttSalir.Text = "Salir";
+            bttSalir.UseVisualStyleBackColor = true;
+            bttSalir.Click += button1_Click;
+            // 
             // Form_Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -184,5 +203,6 @@
         private Button bttClienteMenu;
         private Label label2;
         private Label label1;
+        private Button bttSalir;
     }
 }

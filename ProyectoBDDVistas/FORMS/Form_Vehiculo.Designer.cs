@@ -77,8 +77,8 @@
             label17 = new Label();
             textBox15 = new TextBox();
             button2 = new Button();
-            label37 = new Label();
             dataGridView1 = new DataGridView();
+            label19 = new Label();
             clientesTabControl.SuspendLayout();
             registrarTabPage.SuspendLayout();
             consultarTabPage.SuspendLayout();
@@ -583,16 +583,6 @@
             button2.Text = "Eliminar";
             button2.UseVisualStyleBackColor = true;
             // 
-            // label37
-            // 
-            label37.AutoSize = true;
-            label37.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label37.Location = new Point(29, 20);
-            label37.Name = "label37";
-            label37.Size = new Size(82, 20);
-            label37.TabIndex = 44;
-            label37.Text = "VEHICULO";
-            // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = Color.White;
@@ -605,13 +595,24 @@
             dataGridView1.Size = new Size(410, 533);
             dataGridView1.TabIndex = 43;
             // 
+            // label19
+            // 
+            label19.Dock = DockStyle.Top;
+            label19.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label19.Location = new Point(0, 0);
+            label19.Name = "label19";
+            label19.Size = new Size(1482, 40);
+            label19.TabIndex = 46;
+            label19.Text = "VEHÍCULO";
+            label19.TextAlign = ContentAlignment.TopCenter;
+            // 
             // Form_Vehiculo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
+            Controls.Add(label19);
             Controls.Add(clientesTabControl);
-            Controls.Add(label37);
             Controls.Add(dataGridView1);
             Name = "Form_Vehiculo";
             Text = "Form_Vehiculo";
@@ -626,7 +627,6 @@
             eliminarTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -680,7 +680,7 @@
         private Label label17;
         private TextBox textBox15;
         private Button button2;
-        private Label label37;
         private DataGridView dataGridView1;
+        private Label label19;
     }
 }

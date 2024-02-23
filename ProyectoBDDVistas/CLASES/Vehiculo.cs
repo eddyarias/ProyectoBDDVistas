@@ -14,9 +14,6 @@ namespace ProyectoBDDVistas.CLASES
         public string ApellidoCliente { get; set; }
         public DateTime FechaCompraVehiculo { get; set; }
 
-        // Constructor sin parámetros
-        public Vehiculo() { }
-
         // Constructor con parámetros
         public Vehiculo(string numMatriculaVehiculo, string idTaller, string nombreCliente, string apellidoCliente, DateTime fechaCompraVehiculo)
         {
