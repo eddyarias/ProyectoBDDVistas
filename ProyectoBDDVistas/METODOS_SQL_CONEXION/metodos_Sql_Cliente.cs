@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoBDDVistas.Metodos_Sql_Y_Conexion
+namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     internal class metodos_Sql_Cliente
     {
