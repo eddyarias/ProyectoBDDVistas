@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoBDDVistas.FORMS
 {
-    public partial class Form_Cliente : Form
+    public partial class Form_NumeroTelefono : Form
     {
-        public Form_Cliente()
+        public Form_NumeroTelefono()
         {
             InitializeComponent();
         }

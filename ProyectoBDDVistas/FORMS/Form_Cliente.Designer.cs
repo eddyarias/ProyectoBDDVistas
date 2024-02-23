@@ -86,7 +86,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(94, 38);
+            label1.Location = new Point(650, 42);
             label1.Name = "label1";
             label1.Size = new Size(72, 20);
             label1.TabIndex = 0;
@@ -175,7 +175,6 @@
             label2.Size = new Size(75, 20);
             label2.TabIndex = 68;
             label2.Text = "Dirección:";
-            label2.Click += label2_Click;
             // 
             // textBox10
             // 
@@ -545,7 +544,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1373, 667);
+            ClientSize = new Size(1382, 653);
             Controls.Add(dataGridView1);
             Controls.Add(tabControl1);
             Controls.Add(label1);

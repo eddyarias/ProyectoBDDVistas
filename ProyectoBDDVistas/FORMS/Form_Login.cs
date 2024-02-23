@@ -1,5 +1,4 @@
-
-using ProyectoBDDVistas.CLASES;
+using ProyectoBDDVistas.Metodos_Sql_Y_Conexion;
 
 namespace ProyectoBDDVistas
 {

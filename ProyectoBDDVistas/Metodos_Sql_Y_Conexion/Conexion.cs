@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.Data.SqlClient; // Actualizado para usar Microsoft.Data.SqlClient
+using Microsoft.Data.SqlClient;
 
-namespace ProyectoBDDVistas.CLASES
+namespace ProyectoBDDVistas.Metodos_Sql_Y_Conexion
 {
     internal class Conexion
     {
@@ -17,7 +17,7 @@ namespace ProyectoBDDVistas.CLASES
         // Método para abrir la conexión con un parámetro opcional para mostrar el mensaje
         public bool AbrirConexion(bool mostrarMensajeExito)
         {
-            bool bandera=false;
+            bool bandera = false;
             try
             {
                 if (conexion.State == System.Data.ConnectionState.Closed)
