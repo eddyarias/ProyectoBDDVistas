@@ -29,6 +29,8 @@ namespace ProyectoBDDVistas.FORMS
             form_Vehiculo = new Form_Vehiculo();
             form_Factura = new Form_Factura();
             this.IsMdiContainer = true;
+            this.WindowState = FormWindowState.Maximized;
+
         }
 
         private void HideAllForms()

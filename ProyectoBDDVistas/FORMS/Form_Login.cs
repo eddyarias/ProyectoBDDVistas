@@ -1,4 +1,6 @@
 
+using ProyectoBDDVistas.CLASES;
+
 namespace ProyectoBDDVistas
 {
     public partial class Form_Login : Form
@@ -14,8 +16,18 @@ namespace ProyectoBDDVistas
 
         private void BLogin_Click(object sender, EventArgs e)
         {
-            FORMS.Form_Menu form_menu = new FORMS.Form_Menu();
-            form_menu.Show();
+            String usuario= TBUsername.Text;
+            String contraseña = TBPassword.Text;
+            Conexion conexion = new Conexion("DESKTOP-85782JV","TallerReparacionQ",usuario,contraseña);
+            bool continuar = conexion.AbrirConexion(true);
+
+            if(continuar )
+            {
+                FORMS.Form_Menu form_menu = new FORMS.Form_Menu();
+                form_menu.Show();
+                this.Hide();
+            }
+            
         }
     }
 }
