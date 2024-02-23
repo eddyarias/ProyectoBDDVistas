@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using ProyectoBDDVistas.METODOS_SQL_CONEXION;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace ProyectoBDDVistas.FORMS
 {
     public partial class Form_NumeroTelefono : Form
     {
-        public Form_NumeroTelefono()
+        public SqlConnection Conexion;
+        public metodos_Sql_NumeroTelefono msnt;
+        public Form_NumeroTelefono(SqlConnection conexion)
         {
             InitializeComponent();
+            Conexion = conexion;
+
         }
     }
 }

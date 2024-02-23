@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using ProyectoBDDVistas.METODOS_SQL_CONEXION;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace ProyectoBDDVistas.FORMS
 {
     public partial class Form_Empleado : Form
     {
-        public Form_Empleado()
+        public SqlConnection Conexion;
+        public metodos_Sql_Empleado mse;
+        public Form_Empleado(SqlConnection conexion)
         {
             InitializeComponent();
+            Conexion = conexion;
         }
     }
 }

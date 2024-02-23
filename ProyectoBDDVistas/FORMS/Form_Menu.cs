@@ -29,12 +29,12 @@ namespace ProyectoBDDVistas.FORMS
 
             /*Inicializar formularios*/
             form_Cliente = new Form_Cliente(Conexion);
-            form_Empleado = new Form_Empleado();
-            form_Reparacion = new Form_Reparacion();
-            form_Login = new Form_Login();
-            form_Vehiculo = new Form_Vehiculo();
-            form_Factura = new Form_Factura();
-            form_NumeroTelefono = new Form_NumeroTelefono();
+            form_Empleado = new Form_Empleado(Conexion);
+            form_Reparacion = new Form_Reparacion(Conexion);
+            form_Login = new Form_Login(Conexion);
+            form_Vehiculo = new Form_Vehiculo(Conexion);
+            form_Factura = new Form_Factura(Conexion);
+            form_NumeroTelefono = new Form_NumeroTelefono(Conexion);
 
             /*Este forulario es el contenedor*/
             this.IsMdiContainer = true;

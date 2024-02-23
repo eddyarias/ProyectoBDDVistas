@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using ProyectoBDDVistas.METODOS_SQL_CONEXION;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace ProyectoBDDVistas.FORMS
 {
     public partial class Form_Vehiculo : Form
     {
-        public Form_Vehiculo()
+        public SqlConnection Conexion;
+        public metodos_Sql_Vehiculo msv;
+        public Form_Vehiculo(SqlConnection conexion)
         {
             InitializeComponent();
+            Conexion = conexion;
         }
     }
 }

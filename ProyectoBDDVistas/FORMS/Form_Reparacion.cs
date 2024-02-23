@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using ProyectoBDDVistas.METODOS_SQL_CONEXION;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,12 @@ namespace ProyectoBDDVistas.FORMS
 {
     public partial class Form_Reparacion : Form
     {
-        public Form_Reparacion()
+        public SqlConnection Conexion;
+        public metodos_Sql_Reparacion msr;
+        public Form_Reparacion(SqlConnection conexion)
         {
             InitializeComponent();
+            Conexion = conexion;
         }
     }
 }
