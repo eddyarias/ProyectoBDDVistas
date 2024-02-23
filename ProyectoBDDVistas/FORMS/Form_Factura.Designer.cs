@@ -48,6 +48,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Factura";
             Text = "Form_Factura";
             ResumeLayout(false);

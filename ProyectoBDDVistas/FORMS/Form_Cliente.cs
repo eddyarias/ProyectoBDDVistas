@@ -16,5 +16,10 @@ namespace ProyectoBDDVistas.FORMS
         {
             InitializeComponent();
         }
+
+        private void Form_Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

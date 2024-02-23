@@ -614,6 +614,7 @@
             Controls.Add(label19);
             Controls.Add(clientesTabControl);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Vehiculo";
             Text = "Form_Vehiculo";
             clientesTabControl.ResumeLayout(false);

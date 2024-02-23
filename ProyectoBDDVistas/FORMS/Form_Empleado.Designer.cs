@@ -633,11 +633,13 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
+            ControlBox = false;
             Controls.Add(label26);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Controls.Add(tabControl1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Empleado";
             Text = "FormEmpleado";
             panel1.ResumeLayout(false);

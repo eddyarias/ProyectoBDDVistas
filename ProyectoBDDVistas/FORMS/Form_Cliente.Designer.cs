@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            tabControl1 = new TabControl();
+            tabCRUDClientes = new TabControl();
             tabPage1 = new TabPage();
             BAgregar = new Button();
             label10 = new Label();
@@ -75,7 +75,7 @@
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
-            tabControl1.SuspendLayout();
+            tabCRUDClientes.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -94,17 +94,17 @@
             label1.Text = "CLIENTES";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // tabControl1
+            // tabCRUDClientes
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage3);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Controls.Add(tabPage7);
-            tabControl1.Location = new Point(54, 97);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(455, 455);
-            tabControl1.TabIndex = 86;
+            tabCRUDClientes.Controls.Add(tabPage1);
+            tabCRUDClientes.Controls.Add(tabPage3);
+            tabCRUDClientes.Controls.Add(tabPage2);
+            tabCRUDClientes.Controls.Add(tabPage7);
+            tabCRUDClientes.Location = new Point(60, 100);
+            tabCRUDClientes.Name = "tabCRUDClientes";
+            tabCRUDClientes.SelectedIndex = 0;
+            tabCRUDClientes.Size = new Size(455, 455);
+            tabCRUDClientes.TabIndex = 86;
             // 
             // tabPage1
             // 
@@ -547,12 +547,15 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
+            ControlBox = false;
             Controls.Add(dataGridView1);
-            Controls.Add(tabControl1);
+            Controls.Add(tabCRUDClientes);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Cliente";
             Text = "Form_Cliente";
-            tabControl1.ResumeLayout(false);
+            Load += Form_Cliente_Load;
+            tabCRUDClientes.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             tabPage3.ResumeLayout(false);
@@ -568,7 +571,7 @@
         #endregion
 
         private Label label1;
-        private TabControl tabControl1;
+        private TabControl tabCRUDClientes;
         private TabPage tabPage1;
         private Button BAgregar;
         private Label label10;

@@ -550,6 +550,7 @@
             Controls.Add(label37);
             Controls.Add(TCProveedores);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Reparacion";
             Text = "Form_Reparacion";
             panel1.ResumeLayout(false);
