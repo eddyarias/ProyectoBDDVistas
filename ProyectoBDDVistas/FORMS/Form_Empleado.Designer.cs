@@ -39,13 +39,17 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             BAgregar = new Button();
+            label11 = new Label();
             label10 = new Label();
             label9 = new Label();
             textBox14 = new TextBox();
             label4 = new Label();
             label1 = new Label();
+            textBox11 = new TextBox();
             textBox10 = new TextBox();
             textBox9 = new TextBox();
+            textBox7 = new TextBox();
+            label2 = new Label();
             textBox8 = new TextBox();
             tabPage2 = new TabPage();
             button1 = new Button();
@@ -80,10 +84,6 @@
             textBox13 = new TextBox();
             textBox15 = new TextBox();
             label37 = new Label();
-            textBox11 = new TextBox();
-            label11 = new Label();
-            label2 = new Label();
-            textBox7 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabControl1.SuspendLayout();
@@ -212,6 +212,15 @@
             BAgregar.Text = "Registrar";
             BAgregar.UseVisualStyleBackColor = true;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(92, 58);
+            label11.Name = "label11";
+            label11.Size = new Size(99, 20);
+            label11.TabIndex = 50;
+            label11.Text = "id_empleado:";
+            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -256,6 +265,14 @@
             label1.TabIndex = 68;
             label1.Text = "Salario:";
             // 
+            // textBox11
+            // 
+            textBox11.Location = new Point(197, 51);
+            textBox11.Margin = new Padding(3, 4, 3, 4);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(119, 27);
+            textBox11.TabIndex = 54;
+            // 
             // textBox10
             // 
             textBox10.Location = new Point(197, 87);
@@ -271,6 +288,23 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(119, 27);
             textBox9.TabIndex = 56;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(197, 229);
+            textBox7.Margin = new Padding(3, 4, 3, 4);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(119, 27);
+            textBox7.TabIndex = 64;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(60, 236);
+            label2.Name = "label2";
+            label2.Size = new Size(150, 20);
+            label2.TabIndex = 57;
+            label2.Text = "Fecha inicio contrato:";
             // 
             // textBox8
             // 
@@ -593,45 +627,11 @@
             label37.TabIndex = 84;
             label37.Text = "Empleado";
             // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(197, 51);
-            textBox11.Margin = new Padding(3, 4, 3, 4);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(119, 27);
-            textBox11.TabIndex = 54;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(92, 58);
-            label11.Name = "label11";
-            label11.Size = new Size(99, 20);
-            label11.TabIndex = 50;
-            label11.Text = "id_empleado:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(60, 236);
-            label2.Name = "label2";
-            label2.Size = new Size(150, 20);
-            label2.TabIndex = 57;
-            label2.Text = "Fecha inicio contrato:";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(197, 229);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(119, 27);
-            textBox7.TabIndex = 64;
-            // 
             // Form_Empleado
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1180, 552);
+            ClientSize = new Size(1482, 853);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);

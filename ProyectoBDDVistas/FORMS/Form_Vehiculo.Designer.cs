@@ -236,7 +236,7 @@
             consultarTabPage.Location = new Point(4, 29);
             consultarTabPage.Name = "consultarTabPage";
             consultarTabPage.Padding = new Padding(3);
-            consultarTabPage.Size = new Size(579, 478);
+            consultarTabPage.Size = new Size(516, 478);
             consultarTabPage.TabIndex = 1;
             consultarTabPage.Text = "Consultar";
             consultarTabPage.UseVisualStyleBackColor = true;
@@ -358,7 +358,7 @@
             actualizarTabPage.Location = new Point(4, 29);
             actualizarTabPage.Name = "actualizarTabPage";
             actualizarTabPage.Padding = new Padding(3);
-            actualizarTabPage.Size = new Size(579, 478);
+            actualizarTabPage.Size = new Size(516, 478);
             actualizarTabPage.TabIndex = 2;
             actualizarTabPage.Text = "Actualizar";
             // 
@@ -479,7 +479,7 @@
             eliminarTabPage.Location = new Point(4, 29);
             eliminarTabPage.Name = "eliminarTabPage";
             eliminarTabPage.Padding = new Padding(3);
-            eliminarTabPage.Size = new Size(579, 478);
+            eliminarTabPage.Size = new Size(516, 478);
             eliminarTabPage.TabIndex = 3;
             eliminarTabPage.Text = "Eliminar";
             // 
@@ -609,7 +609,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1133, 619);
+            ClientSize = new Size(1482, 853);
             Controls.Add(clientesTabControl);
             Controls.Add(label37);
             Controls.Add(dataGridView1);
