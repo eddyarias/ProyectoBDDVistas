@@ -35,7 +35,7 @@
             label23 = new Label();
             comboBox3 = new ComboBox();
             textBox20 = new TextBox();
-            dataGridView1 = new DataGridView();
+            DGWEmpleado = new DataGridView();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             BAgregar = new Button();
@@ -85,7 +85,7 @@
             textBox15 = new TextBox();
             label26 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DGWEmpleado).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -95,7 +95,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(649, 367);
+            label3.Location = new Point(677, 110);
             label3.Name = "label3";
             label3.Size = new Size(66, 20);
             label3.TabIndex = 86;
@@ -108,7 +108,7 @@
             panel1.Controls.Add(label23);
             panel1.Controls.Add(comboBox3);
             panel1.Controls.Add(textBox20);
-            panel1.Location = new Point(649, 387);
+            panel1.Location = new Point(706, 134);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(379, 148);
@@ -157,17 +157,19 @@
             textBox20.Size = new Size(162, 27);
             textBox20.TabIndex = 79;
             // 
-            // dataGridView1
+            // DGWEmpleado
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(556, 87);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(571, 244);
-            dataGridView1.TabIndex = 83;
+            DGWEmpleado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DGWEmpleado.BackgroundColor = Color.White;
+            DGWEmpleado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGWEmpleado.Location = new Point(89, 490);
+            DGWEmpleado.Margin = new Padding(3, 4, 3, 4);
+            DGWEmpleado.Name = "DGWEmpleado";
+            DGWEmpleado.RowHeadersWidth = 51;
+            DGWEmpleado.RowTemplate.Height = 24;
+            DGWEmpleado.Size = new Size(1199, 244);
+            DGWEmpleado.TabIndex = 83;
+            DGWEmpleado.DataBindingComplete += DGWEmpleado_DataBindingComplete;
             // 
             // tabControl1
             // 
@@ -177,7 +179,7 @@
             tabControl1.Location = new Point(44, 58);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(455, 455);
+            tabControl1.Size = new Size(549, 374);
             tabControl1.TabIndex = 85;
             // 
             // tabPage1
@@ -198,14 +200,14 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(447, 422);
+            tabPage1.Size = new Size(447, 370);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Registrar empleado";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // BAgregar
             // 
-            BAgregar.Location = new Point(158, 320);
+            BAgregar.Location = new Point(171, 282);
             BAgregar.Name = "BAgregar";
             BAgregar.Size = new Size(94, 37);
             BAgregar.TabIndex = 75;
@@ -334,7 +336,7 @@
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(447, 422);
+            tabPage2.Size = new Size(447, 370);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Actualizar empleado";
             tabPage2.UseVisualStyleBackColor = true;
@@ -485,14 +487,14 @@
             tabPage7.Controls.Add(textBox15);
             tabPage7.Location = new Point(4, 29);
             tabPage7.Name = "tabPage7";
-            tabPage7.Size = new Size(447, 422);
+            tabPage7.Size = new Size(541, 341);
             tabPage7.TabIndex = 3;
             tabPage7.Text = "Eliminar empleado";
             tabPage7.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(153, 316);
+            button2.Location = new Point(174, 279);
             button2.Name = "button2";
             button2.Size = new Size(94, 37);
             button2.TabIndex = 110;
@@ -637,14 +639,14 @@
             Controls.Add(label26);
             Controls.Add(label3);
             Controls.Add(panel1);
-            Controls.Add(dataGridView1);
+            Controls.Add(DGWEmpleado);
             Controls.Add(tabControl1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Empleado";
             Text = "FormEmpleado";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DGWEmpleado).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -665,7 +667,7 @@
         private Label label23;
         private ComboBox comboBox3;
         private TextBox textBox20;
-        private DataGridView dataGridView1;
+        private DataGridView DGWEmpleado;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private Button BAgregar;

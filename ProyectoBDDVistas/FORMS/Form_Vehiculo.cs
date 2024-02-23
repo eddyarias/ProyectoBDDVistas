@@ -20,6 +20,20 @@ namespace ProyectoBDDVistas.FORMS
         {
             InitializeComponent();
             Conexion = conexion;
+            msv = new metodos_Sql_Vehiculo();
+            msv.DesplegarDatosVehiculos(conexion, DGWVEHICULO);
+        }
+        //DGWVEHICULO
+        private void DGWVEHICULO_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            DGWVEHICULO.AutoResizeColumns();
+            DGWVEHICULO.AutoResizeRows();
+
+            // Ajustar el tamaño del DataGridView al de sus columnas y filas
+            int width = DGWVEHICULO.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + DGWVEHICULO.RowHeadersWidth + 3;
+            int height = DGWVEHICULO.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + DGWVEHICULO.ColumnHeadersHeight + 3;
+
+            DGWVEHICULO.ClientSize = new Size(width, height);
         }
     }
 }

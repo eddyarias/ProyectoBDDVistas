@@ -20,6 +20,20 @@ namespace ProyectoBDDVistas.FORMS
         {
             InitializeComponent();
             Conexion = conexion;
+            msr = new metodos_Sql_Reparacion();
+            msr.DesplegarDatosReparacion(conexion, DGWReparacion);
+        }
+
+        private void DGWReparacion_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            DGWReparacion.AutoResizeColumns();
+            DGWReparacion.AutoResizeRows();
+
+            // Ajustar el tamaño del DataGridView al de sus columnas y filas
+            int width = DGWReparacion.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + DGWReparacion.RowHeadersWidth + 3;
+            int height = DGWReparacion.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + DGWReparacion.ColumnHeadersHeight + 3;
+
+            DGWReparacion.ClientSize = new Size(width, height);
         }
     }
 }

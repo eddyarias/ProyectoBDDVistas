@@ -73,13 +73,13 @@
             label31 = new Label();
             label29 = new Label();
             label30 = new Label();
-            dataGridView1 = new DataGridView();
+            DGWReparacion = new DataGridView();
             label9 = new Label();
             panel1.SuspendLayout();
             TCProveedores.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DGWReparacion).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -89,7 +89,7 @@
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(textBox19);
-            panel1.Location = new Point(958, 344);
+            panel1.Location = new Point(979, 269);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(350, 133);
@@ -517,17 +517,19 @@
             label30.TabIndex = 81;
             label30.Text = "Observaciones:";
             // 
-            // dataGridView1
+            // DGWReparacion
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(931, 64);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(410, 256);
-            dataGridView1.TabIndex = 72;
+            DGWReparacion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            DGWReparacion.BackgroundColor = Color.White;
+            DGWReparacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGWReparacion.Location = new Point(570, 504);
+            DGWReparacion.Margin = new Padding(3, 4, 3, 4);
+            DGWReparacion.Name = "DGWReparacion";
+            DGWReparacion.RowHeadersWidth = 51;
+            DGWReparacion.RowTemplate.Height = 24;
+            DGWReparacion.Size = new Size(410, 256);
+            DGWReparacion.TabIndex = 72;
+            DGWReparacion.DataBindingComplete += DGWReparacion_DataBindingComplete;
             // 
             // label9
             // 
@@ -549,7 +551,7 @@
             Controls.Add(panel1);
             Controls.Add(label37);
             Controls.Add(TCProveedores);
-            Controls.Add(dataGridView1);
+            Controls.Add(DGWReparacion);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Reparacion";
             Text = "Form_Reparacion";
@@ -560,7 +562,7 @@
             tabPage1.PerformLayout();
             tabPage7.ResumeLayout(false);
             tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DGWReparacion).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -612,7 +614,7 @@
         private Label label31;
         private Label label29;
         private Label label30;
-        private DataGridView dataGridView1;
+        private DataGridView DGWReparacion;
         private Label label9;
     }
 }

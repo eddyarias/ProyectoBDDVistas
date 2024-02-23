@@ -17,7 +17,7 @@ namespace ProyectoBDDVistas.FORMS
         private Form_Cliente form_Cliente;
         private Form_Empleado form_Empleado;
         private Form_Reparacion form_Reparacion;
-        private Form_Login form_Login;
+       // private Form_Login form_Login;
         private Form_Vehiculo form_Vehiculo;
         private Form_Factura form_Factura;
         private Form_NumeroTelefono form_NumeroTelefono;
@@ -31,7 +31,7 @@ namespace ProyectoBDDVistas.FORMS
             form_Cliente = new Form_Cliente(Conexion);
             form_Empleado = new Form_Empleado(Conexion);
             form_Reparacion = new Form_Reparacion(Conexion);
-            form_Login = new Form_Login(Conexion);
+            //form_Login = new Form_Login();
             form_Vehiculo = new Form_Vehiculo(Conexion);
             form_Factura = new Form_Factura(Conexion);
             form_NumeroTelefono = new Form_NumeroTelefono(Conexion);
@@ -56,7 +56,7 @@ namespace ProyectoBDDVistas.FORMS
             form_Cliente.Hide();
             form_Empleado.Hide();
             form_Reparacion.Hide();
-            form_Login.Hide();
+            //form_Login.Hide();
             form_Vehiculo.Hide();
             form_Factura.Hide();
             form_NumeroTelefono.Hide();

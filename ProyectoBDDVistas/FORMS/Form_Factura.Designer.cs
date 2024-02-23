@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            DGWFactura = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)DGWFactura).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -42,20 +44,37 @@
             label1.Text = "FACTURA";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
+            // DGWFactura
+            // 
+            DGWFactura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DGWFactura.BackgroundColor = Color.White;
+            DGWFactura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGWFactura.Location = new Point(137, 424);
+            DGWFactura.Margin = new Padding(3, 4, 3, 4);
+            DGWFactura.Name = "DGWFactura";
+            DGWFactura.RowHeadersWidth = 51;
+            DGWFactura.RowTemplate.Height = 24;
+            DGWFactura.Size = new Size(1199, 244);
+            DGWFactura.TabIndex = 84;
+            DGWFactura.DataBindingComplete += DGWFactura_DataBindingComplete;
+            // 
             // Form_Factura
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
+            Controls.Add(DGWFactura);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Factura";
             Text = "Form_Factura";
+            ((System.ComponentModel.ISupportInitialize)DGWFactura).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label label1;
+        private DataGridView DGWFactura;
     }
 }

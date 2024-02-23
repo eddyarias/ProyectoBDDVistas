@@ -587,13 +587,14 @@
             // 
             DGWVEHICULO.BackgroundColor = Color.White;
             DGWVEHICULO.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGWVEHICULO.Location = new Point(619, 54);
+            DGWVEHICULO.Location = new Point(623, 55);
             DGWVEHICULO.Margin = new Padding(3, 4, 3, 4);
             DGWVEHICULO.Name = "DGWVEHICULO";
             DGWVEHICULO.RowHeadersWidth = 51;
             DGWVEHICULO.RowTemplate.Height = 24;
             DGWVEHICULO.Size = new Size(410, 533);
             DGWVEHICULO.TabIndex = 43;
+            DGWVEHICULO.DataBindingComplete += DGWVEHICULO_DataBindingComplete;
             // 
             // label19
             // 

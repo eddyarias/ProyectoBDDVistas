@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            DGWFNumeroTelefono = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)DGWFNumeroTelefono).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -42,20 +44,37 @@
             label1.Text = "NUMERO TELEFONO";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
+            // DGWFNumeroTelefono
+            // 
+            DGWFNumeroTelefono.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DGWFNumeroTelefono.BackgroundColor = Color.White;
+            DGWFNumeroTelefono.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGWFNumeroTelefono.Location = new Point(918, 140);
+            DGWFNumeroTelefono.Margin = new Padding(3, 4, 3, 4);
+            DGWFNumeroTelefono.Name = "DGWFNumeroTelefono";
+            DGWFNumeroTelefono.RowHeadersWidth = 51;
+            DGWFNumeroTelefono.RowTemplate.Height = 24;
+            DGWFNumeroTelefono.Size = new Size(279, 244);
+            DGWFNumeroTelefono.TabIndex = 85;
+            DGWFNumeroTelefono.DataBindingComplete += DGWFNumeroTelefono_DataBindingComplete;
+            // 
             // Form_NumeroTelefono
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
+            Controls.Add(DGWFNumeroTelefono);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form_NumeroTelefono";
             Text = "Form_NumeroTelefono";
+            ((System.ComponentModel.ISupportInitialize)DGWFNumeroTelefono).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label label1;
+        private DataGridView DGWFNumeroTelefono;
     }
 }
