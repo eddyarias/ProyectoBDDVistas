@@ -77,14 +77,14 @@
             label17 = new Label();
             textBox15 = new TextBox();
             button2 = new Button();
-            dataGridView1 = new DataGridView();
+            DGWVEHICULO = new DataGridView();
             label19 = new Label();
             clientesTabControl.SuspendLayout();
             registrarTabPage.SuspendLayout();
             consultarTabPage.SuspendLayout();
             actualizarTabPage.SuspendLayout();
             eliminarTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DGWVEHICULO).BeginInit();
             SuspendLayout();
             // 
             // clientesTabControl
@@ -583,17 +583,17 @@
             button2.Text = "Eliminar";
             button2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DGWVEHICULO
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(619, 54);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(410, 533);
-            dataGridView1.TabIndex = 43;
+            DGWVEHICULO.BackgroundColor = Color.White;
+            DGWVEHICULO.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGWVEHICULO.Location = new Point(619, 54);
+            DGWVEHICULO.Margin = new Padding(3, 4, 3, 4);
+            DGWVEHICULO.Name = "DGWVEHICULO";
+            DGWVEHICULO.RowHeadersWidth = 51;
+            DGWVEHICULO.RowTemplate.Height = 24;
+            DGWVEHICULO.Size = new Size(410, 533);
+            DGWVEHICULO.TabIndex = 43;
             // 
             // label19
             // 
@@ -613,7 +613,7 @@
             ClientSize = new Size(1482, 853);
             Controls.Add(label19);
             Controls.Add(clientesTabControl);
-            Controls.Add(dataGridView1);
+            Controls.Add(DGWVEHICULO);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Vehiculo";
             Text = "Form_Vehiculo";
@@ -626,7 +626,7 @@
             actualizarTabPage.PerformLayout();
             eliminarTabPage.ResumeLayout(false);
             eliminarTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DGWVEHICULO).EndInit();
             ResumeLayout(false);
         }
 
@@ -681,7 +681,7 @@
         private Label label17;
         private TextBox textBox15;
         private Button button2;
-        private DataGridView dataGridView1;
+        private DataGridView DGWVEHICULO;
         private Label label19;
     }
 }

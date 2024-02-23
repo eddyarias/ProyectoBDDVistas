@@ -70,17 +70,13 @@
             textBox13 = new TextBox();
             button2 = new Button();
             textBox15 = new TextBox();
-            dataGridView1 = new DataGridView();
-            C = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
+            DGWClientes = new DataGridView();
             tabCRUDClientes.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DGWClientes).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -504,43 +500,18 @@
             textBox15.Size = new Size(285, 29);
             textBox15.TabIndex = 94;
             // 
-            // dataGridView1
+            // DGWClientes
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { C, Column1, Column2, Column3 });
-            dataGridView1.Location = new Point(618, 126);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(554, 426);
-            dataGridView1.TabIndex = 87;
-            // 
-            // C
-            // 
-            C.HeaderText = "Nombre";
-            C.MinimumWidth = 6;
-            C.Name = "C";
-            C.Width = 125;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Apellido";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Cedula";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Dirección";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
+            DGWClientes.AllowUserToAddRows = false;
+            DGWClientes.AllowUserToDeleteRows = false;
+            DGWClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGWClientes.Location = new Point(618, 126);
+            DGWClientes.Name = "DGWClientes";
+            DGWClientes.ReadOnly = true;
+            DGWClientes.RowHeadersWidth = 51;
+            DGWClientes.Size = new Size(554, 426);
+            DGWClientes.TabIndex = 87;
+            DGWClientes.DataBindingComplete += DGWClientes_DataBindingComplete;
             // 
             // Form_Cliente
             // 
@@ -548,7 +519,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
             ControlBox = false;
-            Controls.Add(dataGridView1);
+            Controls.Add(DGWClientes);
             Controls.Add(tabCRUDClientes);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
@@ -564,7 +535,7 @@
             tabPage2.PerformLayout();
             tabPage7.ResumeLayout(false);
             tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DGWClientes).EndInit();
             ResumeLayout(false);
         }
 
@@ -612,10 +583,6 @@
         private TextBox textBox13;
         private Button button2;
         private TextBox textBox15;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn C;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
+        private DataGridView DGWClientes;
     }
 }

@@ -1,4 +1,4 @@
-using ProyectoBDDVistas.Metodos_Sql_Y_Conexion;
+using ProyectoBDDVistas.METODOS_SQL_CONEXION;
 
 namespace ProyectoBDDVistas
 {
@@ -17,12 +17,13 @@ namespace ProyectoBDDVistas
         {
             String usuario= TBUsername.Text;
             String contraseña = TBPassword.Text;
-            Conexion conexion = new Conexion("DESKTOP-85782JV","TallerReparacionQ",usuario,contraseña);
+            Conexion conexion = new Conexion("DESKTOP-85782JV","TallerReparacionG",usuario,contraseña);
             bool continuar = conexion.AbrirConexion(true);
 
             if(continuar )
             {
-                FORMS.Form_Menu form_menu = new FORMS.Form_Menu();
+                
+                FORMS.Form_Menu form_menu = new FORMS.Form_Menu(conexion.ObtenerConexion());
                 form_menu.Show();
                 this.Hide();
             }
