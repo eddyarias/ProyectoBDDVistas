@@ -21,19 +21,20 @@ namespace ProyectoBDDVistas.FORMS
             InitializeComponent();
             Conexion = conexion;
             msf = new metodos_Sql_Factura();
-            msf.DesplegarDatosFacturas(conexion, DGWFactura);
+            msf.DesplegarDatosFacturas(conexion, DGWFacturas);
         }
 
-        private void DGWFactura_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        private void DGWFacturas_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            DGWFactura.AutoResizeColumns();
-            DGWFactura.AutoResizeRows();
+            DGWFacturas.AutoResizeColumns();
+            DGWFacturas.AutoResizeRows();
 
             // Ajustar el tamaño del DataGridView al de sus columnas y filas
-            int width = DGWFactura.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + DGWFactura.RowHeadersWidth + 3;
-            int height = DGWFactura.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + DGWFactura.ColumnHeadersHeight + 3;
+            int width = DGWFacturas.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + DGWFacturas.RowHeadersWidth + 3-950;
+            int height = DGWFacturas.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + DGWFacturas.ColumnHeadersHeight + 3;
 
-            DGWFactura.ClientSize = new Size(width, height);
+            DGWFacturas.ClientSize = new Size(width, height);
+            DGWFacturas.Columns[0].Width = 100;
         }
     }
 }

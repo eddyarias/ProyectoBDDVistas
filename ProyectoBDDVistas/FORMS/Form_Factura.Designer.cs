@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            DGWFactura = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)DGWFactura).BeginInit();
+            DGWFacturas = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)DGWFacturas).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -44,31 +44,30 @@
             label1.Text = "FACTURA";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // DGWFactura
+            // DGWFacturas
             // 
-            DGWFactura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            DGWFactura.BackgroundColor = Color.White;
-            DGWFactura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGWFactura.Location = new Point(137, 424);
-            DGWFactura.Margin = new Padding(3, 4, 3, 4);
-            DGWFactura.Name = "DGWFactura";
-            DGWFactura.RowHeadersWidth = 51;
-            DGWFactura.RowTemplate.Height = 24;
-            DGWFactura.Size = new Size(1199, 244);
-            DGWFactura.TabIndex = 84;
-            DGWFactura.DataBindingComplete += DGWFactura_DataBindingComplete;
+            DGWFacturas.BackgroundColor = Color.White;
+            DGWFacturas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGWFacturas.Location = new Point(26, 153);
+            DGWFacturas.Margin = new Padding(3, 4, 3, 4);
+            DGWFacturas.Name = "DGWFacturas";
+            DGWFacturas.RowHeadersWidth = 51;
+            DGWFacturas.RowTemplate.Height = 24;
+            DGWFacturas.Size = new Size(410, 313);
+            DGWFacturas.TabIndex = 44;
+            DGWFacturas.DataBindingComplete += DGWFacturas_DataBindingComplete;
             // 
             // Form_Factura
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1482, 853);
-            Controls.Add(DGWFactura);
+            Controls.Add(DGWFacturas);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form_Factura";
             Text = "Form_Factura";
-            ((System.ComponentModel.ISupportInitialize)DGWFactura).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DGWFacturas).EndInit();
             ResumeLayout(false);
         }
 
@@ -76,5 +75,6 @@
 
         private Label label1;
         private DataGridView DGWFactura;
+        private DataGridView DGWFacturas;
     }
 }

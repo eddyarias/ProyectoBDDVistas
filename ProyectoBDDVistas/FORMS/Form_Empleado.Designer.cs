@@ -167,7 +167,7 @@
             DGWEmpleado.Name = "DGWEmpleado";
             DGWEmpleado.RowHeadersWidth = 51;
             DGWEmpleado.RowTemplate.Height = 24;
-            DGWEmpleado.Size = new Size(1199, 244);
+            DGWEmpleado.Size = new Size(1181, 244);
             DGWEmpleado.TabIndex = 83;
             DGWEmpleado.DataBindingComplete += DGWEmpleado_DataBindingComplete;
             // 
@@ -200,7 +200,7 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(447, 370);
+            tabPage1.Size = new Size(541, 341);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Registrar empleado";
             tabPage1.UseVisualStyleBackColor = true;
@@ -336,7 +336,7 @@
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(447, 370);
+            tabPage2.Size = new Size(541, 341);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Actualizar empleado";
             tabPage2.UseVisualStyleBackColor = true;

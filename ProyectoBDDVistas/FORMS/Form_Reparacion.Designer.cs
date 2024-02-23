@@ -522,12 +522,12 @@
             DGWReparacion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             DGWReparacion.BackgroundColor = Color.White;
             DGWReparacion.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGWReparacion.Location = new Point(570, 504);
+            DGWReparacion.Location = new Point(47, 512);
             DGWReparacion.Margin = new Padding(3, 4, 3, 4);
             DGWReparacion.Name = "DGWReparacion";
             DGWReparacion.RowHeadersWidth = 51;
             DGWReparacion.RowTemplate.Height = 24;
-            DGWReparacion.Size = new Size(410, 256);
+            DGWReparacion.Size = new Size(1373, 256);
             DGWReparacion.TabIndex = 72;
             DGWReparacion.DataBindingComplete += DGWReparacion_DataBindingComplete;
             // 

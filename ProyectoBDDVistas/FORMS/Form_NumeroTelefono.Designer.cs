@@ -54,7 +54,7 @@
             DGWFNumeroTelefono.Name = "DGWFNumeroTelefono";
             DGWFNumeroTelefono.RowHeadersWidth = 51;
             DGWFNumeroTelefono.RowTemplate.Height = 24;
-            DGWFNumeroTelefono.Size = new Size(279, 244);
+            DGWFNumeroTelefono.Size = new Size(265, 244);
             DGWFNumeroTelefono.TabIndex = 85;
             DGWFNumeroTelefono.DataBindingComplete += DGWFNumeroTelefono_DataBindingComplete;
             // 
