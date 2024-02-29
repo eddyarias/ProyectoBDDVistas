@@ -123,7 +123,7 @@
             // 
             // BAgregar
             // 
-            BAgregar.Location = new Point(158, 320);
+            BAgregar.Location = new Point(172, 339);
             BAgregar.Name = "BAgregar";
             BAgregar.Size = new Size(94, 37);
             BAgregar.TabIndex = 75;
@@ -133,7 +133,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(125, 130);
+            label10.Location = new Point(86, 138);
             label10.Name = "label10";
             label10.Size = new Size(67, 20);
             label10.TabIndex = 51;
@@ -142,7 +142,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(125, 165);
+            label9.Location = new Point(86, 173);
             label9.Name = "label9";
             label9.Size = new Size(69, 20);
             label9.TabIndex = 52;
@@ -150,7 +150,7 @@
             // 
             // textBox14
             // 
-            textBox14.Location = new Point(197, 191);
+            textBox14.Location = new Point(158, 199);
             textBox14.Margin = new Padding(3, 4, 3, 4);
             textBox14.Name = "textBox14";
             textBox14.Size = new Size(218, 27);
@@ -159,7 +159,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(133, 94);
+            label4.Location = new Point(94, 102);
             label4.Name = "label4";
             label4.Size = new Size(58, 20);
             label4.TabIndex = 53;
@@ -168,7 +168,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(117, 198);
+            label2.Location = new Point(78, 206);
             label2.Name = "label2";
             label2.Size = new Size(75, 20);
             label2.TabIndex = 68;
@@ -176,7 +176,7 @@
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(197, 87);
+            textBox10.Location = new Point(158, 95);
             textBox10.Margin = new Padding(3, 4, 3, 4);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(119, 27);
@@ -184,7 +184,7 @@
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(197, 120);
+            textBox9.Location = new Point(158, 128);
             textBox9.Margin = new Padding(3, 4, 3, 4);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(218, 27);
@@ -192,7 +192,7 @@
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(197, 155);
+            textBox8.Location = new Point(158, 163);
             textBox8.Margin = new Padding(3, 4, 3, 4);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(218, 27);
