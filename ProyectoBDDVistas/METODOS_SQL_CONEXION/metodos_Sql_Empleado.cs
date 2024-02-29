@@ -11,11 +11,10 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     public class metodos_Sql_Empleado
     {
-        //cuando ustedes hagan descomenten este
-        //public string tabla = "VISTA_EMPLEADO";
-        // y comente este de abajo
-        public string tabla = "EMPLEADO_02";
-        public string idTaller = "TALL002";
+
+        public string tabla = "VISTA_EMPLEADO";
+
+        public string idTaller = "TALL001";
 
 
         public void DesplegarDatosEmpleados(SqlConnection conexion, DataGridView dataGridView)
