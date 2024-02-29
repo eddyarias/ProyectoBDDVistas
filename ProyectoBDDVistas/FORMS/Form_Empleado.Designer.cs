@@ -38,52 +38,54 @@
             DGWEmpleado = new DataGridView();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            BAgregar = new Button();
-            label11 = new Label();
-            label10 = new Label();
-            label9 = new Label();
-            textBox14 = new TextBox();
-            label4 = new Label();
             label1 = new Label();
-            textBox11 = new TextBox();
-            textBox10 = new TextBox();
-            textBox9 = new TextBox();
-            textBox7 = new TextBox();
             label2 = new Label();
-            textBox8 = new TextBox();
+            label4 = new Label();
+            txtBidEmpleadoRegistrar = new TextBox();
+            label9 = new Label();
+            txtBapeEmpleadoRegistrar = new TextBox();
+            txtBsalEmpleadoRegistrar = new TextBox();
+            label10 = new Label();
+            label11 = new Label();
+            txtBfecEmpleadoRegistrar = new TextBox();
+            label25 = new Label();
+            txtBnomEmpleadoRegistrar = new TextBox();
+            txtBcedEmpleadoRegistrar = new TextBox();
+            BAgregar = new Button();
             tabPage2 = new TabPage();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            txtBidEmpleadoAct = new TextBox();
+            label8 = new Label();
+            txtBapeEmpleadoAct = new TextBox();
+            txtBsalEmpleadoAct = new TextBox();
+            label12 = new Label();
+            label13 = new Label();
+            txtBfecEmpleadoAct = new TextBox();
+            label27 = new Label();
+            txtBnomEmpleadoAct = new TextBox();
+            txtBcedEmpleadoAct = new TextBox();
             button1 = new Button();
             label21 = new Label();
-            label5 = new Label();
             label22 = new Label();
-            label6 = new Label();
-            textBox2 = new TextBox();
-            label7 = new Label();
-            textBox6 = new TextBox();
-            textBox1 = new TextBox();
-            label13 = new Label();
-            label8 = new Label();
-            textBox5 = new TextBox();
-            label12 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
             tabPage7 = new TabPage();
-            button2 = new Button();
-            textBox12 = new TextBox();
             label14 = new Label();
-            textBox18 = new TextBox();
+            button2 = new Button();
             label15 = new Label();
-            textBox17 = new TextBox();
             label16 = new Label();
-            label25 = new Label();
+            txtBcedEmpleadoEli = new TextBox();
+            txtBidEmpleadoEli = new TextBox();
+            txtBnomEmpleadoEli = new TextBox();
             label17 = new Label();
-            textBox16 = new TextBox();
             label20 = new Label();
-            label18 = new Label();
+            txtBapeEmpleadoEli = new TextBox();
+            txtBfecEmpleadoEli = new TextBox();
+            txtBsalEmpleadoEli = new TextBox();
             label19 = new Label();
-            textBox13 = new TextBox();
-            textBox15 = new TextBox();
+            label18 = new Label();
             label26 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DGWEmpleado).BeginInit();
             tabControl1.SuspendLayout();
@@ -169,6 +171,7 @@
             DGWEmpleado.RowTemplate.Height = 24;
             DGWEmpleado.Size = new Size(1181, 244);
             DGWEmpleado.TabIndex = 83;
+            DGWEmpleado.CellClick += DGWEmpleado_CellClick;
             DGWEmpleado.DataBindingComplete += DGWEmpleado_DataBindingComplete;
             // 
             // tabControl1
@@ -179,160 +182,172 @@
             tabControl1.Location = new Point(44, 58);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(549, 374);
+            tabControl1.Size = new Size(549, 412);
             tabControl1.TabIndex = 85;
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(BAgregar);
-            tabPage1.Controls.Add(label11);
-            tabPage1.Controls.Add(label10);
-            tabPage1.Controls.Add(label9);
-            tabPage1.Controls.Add(textBox14);
-            tabPage1.Controls.Add(label4);
+            tabPage1.Controls.Add(dateTimePicker1);
             tabPage1.Controls.Add(label1);
-            tabPage1.Controls.Add(textBox11);
-            tabPage1.Controls.Add(textBox10);
-            tabPage1.Controls.Add(textBox9);
-            tabPage1.Controls.Add(textBox7);
             tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(textBox8);
+            tabPage1.Controls.Add(label4);
+            tabPage1.Controls.Add(txtBidEmpleadoRegistrar);
+            tabPage1.Controls.Add(label9);
+            tabPage1.Controls.Add(txtBapeEmpleadoRegistrar);
+            tabPage1.Controls.Add(txtBsalEmpleadoRegistrar);
+            tabPage1.Controls.Add(label10);
+            tabPage1.Controls.Add(label11);
+            tabPage1.Controls.Add(txtBfecEmpleadoRegistrar);
+            tabPage1.Controls.Add(label25);
+            tabPage1.Controls.Add(txtBnomEmpleadoRegistrar);
+            tabPage1.Controls.Add(txtBcedEmpleadoRegistrar);
+            tabPage1.Controls.Add(BAgregar);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(541, 341);
+            tabPage1.Size = new Size(541, 379);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Registrar empleado";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(200, 252);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 95;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(92, 50);
+            label2.Name = "label2";
+            label2.Size = new Size(99, 20);
+            label2.TabIndex = 96;
+            label2.Text = "id_empleado:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(124, 120);
+            label4.Name = "label4";
+            label4.Size = new Size(67, 20);
+            label4.TabIndex = 97;
+            label4.Text = "Nombre:";
+            // 
+            // txtBidEmpleadoRegistrar
+            // 
+            txtBidEmpleadoRegistrar.Location = new Point(197, 47);
+            txtBidEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBidEmpleadoRegistrar.Name = "txtBidEmpleadoRegistrar";
+            txtBidEmpleadoRegistrar.Size = new Size(255, 27);
+            txtBidEmpleadoRegistrar.TabIndex = 100;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(118, 154);
+            label9.Name = "label9";
+            label9.Size = new Size(69, 20);
+            label9.TabIndex = 98;
+            label9.Text = "Apellido:";
+            // 
+            // txtBapeEmpleadoRegistrar
+            // 
+            txtBapeEmpleadoRegistrar.Location = new Point(197, 151);
+            txtBapeEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBapeEmpleadoRegistrar.Name = "txtBapeEmpleadoRegistrar";
+            txtBapeEmpleadoRegistrar.Size = new Size(255, 27);
+            txtBapeEmpleadoRegistrar.TabIndex = 104;
+            // 
+            // txtBsalEmpleadoRegistrar
+            // 
+            txtBsalEmpleadoRegistrar.Location = new Point(197, 187);
+            txtBsalEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBsalEmpleadoRegistrar.Name = "txtBsalEmpleadoRegistrar";
+            txtBsalEmpleadoRegistrar.Size = new Size(255, 27);
+            txtBsalEmpleadoRegistrar.TabIndex = 107;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(41, 229);
+            label10.Name = "label10";
+            label10.Size = new Size(150, 20);
+            label10.TabIndex = 103;
+            label10.Text = "Fecha inicio contrato:";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(133, 86);
+            label11.Name = "label11";
+            label11.Size = new Size(58, 20);
+            label11.TabIndex = 99;
+            label11.Text = "Cedula:";
+            // 
+            // txtBfecEmpleadoRegistrar
+            // 
+            txtBfecEmpleadoRegistrar.Location = new Point(197, 226);
+            txtBfecEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBfecEmpleadoRegistrar.Name = "txtBfecEmpleadoRegistrar";
+            txtBfecEmpleadoRegistrar.Size = new Size(255, 27);
+            txtBfecEmpleadoRegistrar.TabIndex = 105;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(133, 190);
+            label25.Name = "label25";
+            label25.Size = new Size(58, 20);
+            label25.TabIndex = 106;
+            label25.Text = "Salario:";
+            // 
+            // txtBnomEmpleadoRegistrar
+            // 
+            txtBnomEmpleadoRegistrar.Location = new Point(197, 117);
+            txtBnomEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBnomEmpleadoRegistrar.Name = "txtBnomEmpleadoRegistrar";
+            txtBnomEmpleadoRegistrar.Size = new Size(255, 27);
+            txtBnomEmpleadoRegistrar.TabIndex = 102;
+            // 
+            // txtBcedEmpleadoRegistrar
+            // 
+            txtBcedEmpleadoRegistrar.Location = new Point(197, 83);
+            txtBcedEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBcedEmpleadoRegistrar.Name = "txtBcedEmpleadoRegistrar";
+            txtBcedEmpleadoRegistrar.Size = new Size(255, 27);
+            txtBcedEmpleadoRegistrar.TabIndex = 101;
+            // 
             // BAgregar
             // 
-            BAgregar.Location = new Point(171, 282);
+            BAgregar.Location = new Point(219, 324);
             BAgregar.Name = "BAgregar";
             BAgregar.Size = new Size(94, 37);
             BAgregar.TabIndex = 75;
             BAgregar.Text = "Registrar";
             BAgregar.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(92, 58);
-            label11.Name = "label11";
-            label11.Size = new Size(99, 20);
-            label11.TabIndex = 50;
-            label11.Text = "id_empleado:";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(122, 127);
-            label10.Name = "label10";
-            label10.Size = new Size(67, 20);
-            label10.TabIndex = 51;
-            label10.Text = "Nombre:";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(122, 162);
-            label9.Name = "label9";
-            label9.Size = new Size(69, 20);
-            label9.TabIndex = 52;
-            label9.Text = "Apellido:";
-            // 
-            // textBox14
-            // 
-            textBox14.Location = new Point(197, 191);
-            textBox14.Margin = new Padding(3, 4, 3, 4);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(119, 27);
-            textBox14.TabIndex = 69;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(131, 94);
-            label4.Name = "label4";
-            label4.Size = new Size(58, 20);
-            label4.TabIndex = 53;
-            label4.Text = "Cedula:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(131, 198);
-            label1.Name = "label1";
-            label1.Size = new Size(58, 20);
-            label1.TabIndex = 68;
-            label1.Text = "Salario:";
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(197, 51);
-            textBox11.Margin = new Padding(3, 4, 3, 4);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(119, 27);
-            textBox11.TabIndex = 54;
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(197, 87);
-            textBox10.Margin = new Padding(3, 4, 3, 4);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(119, 27);
-            textBox10.TabIndex = 55;
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(197, 120);
-            textBox9.Margin = new Padding(3, 4, 3, 4);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(119, 27);
-            textBox9.TabIndex = 56;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(197, 229);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(119, 27);
-            textBox7.TabIndex = 64;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(60, 236);
-            label2.Name = "label2";
-            label2.Size = new Size(150, 20);
-            label2.TabIndex = 57;
-            label2.Text = "Fecha inicio contrato:";
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(197, 155);
-            textBox8.Margin = new Padding(3, 4, 3, 4);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(119, 27);
-            textBox8.TabIndex = 63;
+            BAgregar.Click += BAgregar_Click;
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(label5);
+            tabPage2.Controls.Add(label6);
+            tabPage2.Controls.Add(label7);
+            tabPage2.Controls.Add(txtBidEmpleadoAct);
+            tabPage2.Controls.Add(label8);
+            tabPage2.Controls.Add(txtBapeEmpleadoAct);
+            tabPage2.Controls.Add(txtBsalEmpleadoAct);
+            tabPage2.Controls.Add(label12);
+            tabPage2.Controls.Add(label13);
+            tabPage2.Controls.Add(txtBfecEmpleadoAct);
+            tabPage2.Controls.Add(label27);
+            tabPage2.Controls.Add(txtBnomEmpleadoAct);
+            tabPage2.Controls.Add(txtBcedEmpleadoAct);
             tabPage2.Controls.Add(button1);
             tabPage2.Controls.Add(label21);
-            tabPage2.Controls.Add(label5);
             tabPage2.Controls.Add(label22);
-            tabPage2.Controls.Add(label6);
-            tabPage2.Controls.Add(textBox2);
-            tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(textBox6);
-            tabPage2.Controls.Add(textBox1);
-            tabPage2.Controls.Add(label13);
-            tabPage2.Controls.Add(label8);
-            tabPage2.Controls.Add(textBox5);
-            tabPage2.Controls.Add(label12);
-            tabPage2.Controls.Add(textBox4);
-            tabPage2.Controls.Add(textBox3);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -341,14 +356,126 @@
             tabPage2.Text = "Actualizar empleado";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(224, 263);
+            label5.Name = "label5";
+            label5.Size = new Size(0, 20);
+            label5.TabIndex = 108;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(79, 56);
+            label6.Name = "label6";
+            label6.Size = new Size(99, 20);
+            label6.TabIndex = 109;
+            label6.Text = "id_empleado:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(111, 126);
+            label7.Name = "label7";
+            label7.Size = new Size(67, 20);
+            label7.TabIndex = 110;
+            label7.Text = "Nombre:";
+            // 
+            // txtBidEmpleadoAct
+            // 
+            txtBidEmpleadoAct.Location = new Point(184, 53);
+            txtBidEmpleadoAct.Margin = new Padding(3, 4, 3, 4);
+            txtBidEmpleadoAct.Name = "txtBidEmpleadoAct";
+            txtBidEmpleadoAct.ReadOnly = true;
+            txtBidEmpleadoAct.Size = new Size(255, 27);
+            txtBidEmpleadoAct.TabIndex = 113;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(105, 160);
+            label8.Name = "label8";
+            label8.Size = new Size(69, 20);
+            label8.TabIndex = 111;
+            label8.Text = "Apellido:";
+            // 
+            // txtBapeEmpleadoAct
+            // 
+            txtBapeEmpleadoAct.Location = new Point(184, 157);
+            txtBapeEmpleadoAct.Margin = new Padding(3, 4, 3, 4);
+            txtBapeEmpleadoAct.Name = "txtBapeEmpleadoAct";
+            txtBapeEmpleadoAct.Size = new Size(255, 27);
+            txtBapeEmpleadoAct.TabIndex = 117;
+            // 
+            // txtBsalEmpleadoAct
+            // 
+            txtBsalEmpleadoAct.Location = new Point(184, 193);
+            txtBsalEmpleadoAct.Margin = new Padding(3, 4, 3, 4);
+            txtBsalEmpleadoAct.Name = "txtBsalEmpleadoAct";
+            txtBsalEmpleadoAct.Size = new Size(255, 27);
+            txtBsalEmpleadoAct.TabIndex = 120;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(28, 235);
+            label12.Name = "label12";
+            label12.Size = new Size(150, 20);
+            label12.TabIndex = 116;
+            label12.Text = "Fecha inicio contrato:";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(120, 92);
+            label13.Name = "label13";
+            label13.Size = new Size(58, 20);
+            label13.TabIndex = 112;
+            label13.Text = "Cedula:";
+            // 
+            // txtBfecEmpleadoAct
+            // 
+            txtBfecEmpleadoAct.Location = new Point(184, 232);
+            txtBfecEmpleadoAct.Margin = new Padding(3, 4, 3, 4);
+            txtBfecEmpleadoAct.Name = "txtBfecEmpleadoAct";
+            txtBfecEmpleadoAct.Size = new Size(255, 27);
+            txtBfecEmpleadoAct.TabIndex = 118;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(120, 196);
+            label27.Name = "label27";
+            label27.Size = new Size(58, 20);
+            label27.TabIndex = 119;
+            label27.Text = "Salario:";
+            // 
+            // txtBnomEmpleadoAct
+            // 
+            txtBnomEmpleadoAct.Location = new Point(184, 123);
+            txtBnomEmpleadoAct.Margin = new Padding(3, 4, 3, 4);
+            txtBnomEmpleadoAct.Name = "txtBnomEmpleadoAct";
+            txtBnomEmpleadoAct.Size = new Size(255, 27);
+            txtBnomEmpleadoAct.TabIndex = 115;
+            // 
+            // txtBcedEmpleadoAct
+            // 
+            txtBcedEmpleadoAct.Location = new Point(184, 89);
+            txtBcedEmpleadoAct.Margin = new Padding(3, 4, 3, 4);
+            txtBcedEmpleadoAct.Name = "txtBcedEmpleadoAct";
+            txtBcedEmpleadoAct.Size = new Size(255, 27);
+            txtBcedEmpleadoAct.TabIndex = 114;
+            // 
             // button1
             // 
-            button1.Location = new Point(147, 331);
+            button1.Location = new Point(211, 286);
             button1.Name = "button1";
             button1.Size = new Size(94, 37);
             button1.TabIndex = 95;
             button1.Text = "Actualizar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label21
             // 
@@ -358,15 +485,6 @@
             label21.Size = new Size(0, 20);
             label21.TabIndex = 64;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(93, 75);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 20);
-            label5.TabIndex = 83;
-            label5.Text = "id_empleado:";
-            // 
             // label22
             // 
             label22.AutoSize = true;
@@ -375,116 +493,22 @@
             label22.Size = new Size(0, 20);
             label22.TabIndex = 63;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(121, 144);
-            label6.Name = "label6";
-            label6.Size = new Size(67, 20);
-            label6.TabIndex = 84;
-            label6.Text = "Nombre:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(186, 61);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(119, 27);
-            textBox2.TabIndex = 87;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(121, 179);
-            label7.Name = "label7";
-            label7.Size = new Size(69, 20);
-            label7.TabIndex = 85;
-            label7.Text = "Apellido:";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(186, 165);
-            textBox6.Margin = new Padding(3, 4, 3, 4);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(119, 27);
-            textBox6.TabIndex = 91;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(186, 201);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(119, 27);
-            textBox1.TabIndex = 94;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(50, 247);
-            label13.Name = "label13";
-            label13.Size = new Size(150, 20);
-            label13.TabIndex = 90;
-            label13.Text = "Fecha inicio contrato:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(129, 111);
-            label8.Name = "label8";
-            label8.Size = new Size(58, 20);
-            label8.TabIndex = 86;
-            label8.Text = "Cedula:";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(186, 240);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(119, 27);
-            textBox5.TabIndex = 92;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(131, 215);
-            label12.Name = "label12";
-            label12.Size = new Size(58, 20);
-            label12.TabIndex = 93;
-            label12.Text = "Salario:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(186, 131);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(119, 27);
-            textBox4.TabIndex = 89;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(186, 97);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(119, 27);
-            textBox3.TabIndex = 88;
-            // 
             // tabPage7
             // 
-            tabPage7.Controls.Add(button2);
-            tabPage7.Controls.Add(textBox12);
             tabPage7.Controls.Add(label14);
-            tabPage7.Controls.Add(textBox18);
+            tabPage7.Controls.Add(button2);
             tabPage7.Controls.Add(label15);
-            tabPage7.Controls.Add(textBox17);
             tabPage7.Controls.Add(label16);
-            tabPage7.Controls.Add(label25);
+            tabPage7.Controls.Add(txtBcedEmpleadoEli);
+            tabPage7.Controls.Add(txtBidEmpleadoEli);
+            tabPage7.Controls.Add(txtBnomEmpleadoEli);
             tabPage7.Controls.Add(label17);
-            tabPage7.Controls.Add(textBox16);
             tabPage7.Controls.Add(label20);
-            tabPage7.Controls.Add(label18);
+            tabPage7.Controls.Add(txtBapeEmpleadoEli);
+            tabPage7.Controls.Add(txtBfecEmpleadoEli);
+            tabPage7.Controls.Add(txtBsalEmpleadoEli);
             tabPage7.Controls.Add(label19);
-            tabPage7.Controls.Add(textBox13);
-            tabPage7.Controls.Add(textBox15);
+            tabPage7.Controls.Add(label18);
             tabPage7.Location = new Point(4, 29);
             tabPage7.Name = "tabPage7";
             tabPage7.Size = new Size(541, 341);
@@ -492,132 +516,131 @@
             tabPage7.Text = "Eliminar empleado";
             tabPage7.UseVisualStyleBackColor = true;
             // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(189, 252);
+            label14.Name = "label14";
+            label14.Size = new Size(0, 20);
+            label14.TabIndex = 108;
+            // 
             // button2
             // 
-            button2.Location = new Point(174, 279);
+            button2.Location = new Point(203, 275);
             button2.Name = "button2";
             button2.Size = new Size(94, 37);
             button2.TabIndex = 110;
             button2.Text = "Eliminar";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox12
-            // 
-            textBox12.Location = new Point(192, 47);
-            textBox12.Margin = new Padding(3, 4, 3, 4);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(119, 27);
-            textBox12.TabIndex = 102;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(192, 248);
-            label14.Name = "label14";
-            label14.Size = new Size(0, 20);
-            label14.TabIndex = 97;
-            // 
-            // textBox18
-            // 
-            textBox18.Location = new Point(192, 83);
-            textBox18.Margin = new Padding(3, 4, 3, 4);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(119, 27);
-            textBox18.TabIndex = 103;
+            button2.Click += button2_Click;
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(96, 57);
+            label15.Location = new Point(81, 50);
             label15.Name = "label15";
             label15.Size = new Size(99, 20);
-            label15.TabIndex = 98;
+            label15.TabIndex = 109;
             label15.Text = "id_empleado:";
-            // 
-            // textBox17
-            // 
-            textBox17.Location = new Point(192, 116);
-            textBox17.Margin = new Padding(3, 4, 3, 4);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(119, 27);
-            textBox17.TabIndex = 104;
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(186, 256);
+            label16.Location = new Point(113, 120);
             label16.Name = "label16";
-            label16.Size = new Size(0, 20);
-            label16.TabIndex = 96;
+            label16.Size = new Size(67, 20);
+            label16.TabIndex = 110;
+            label16.Text = "Nombre:";
             // 
-            // label25
+            // txtBcedEmpleadoEli
             // 
-            label25.AutoSize = true;
-            label25.Location = new Point(134, 197);
-            label25.Name = "label25";
-            label25.Size = new Size(58, 20);
-            label25.TabIndex = 108;
-            label25.Text = "Salario:";
+            txtBcedEmpleadoEli.Location = new Point(186, 83);
+            txtBcedEmpleadoEli.Margin = new Padding(3, 4, 3, 4);
+            txtBcedEmpleadoEli.Name = "txtBcedEmpleadoEli";
+            txtBcedEmpleadoEli.ReadOnly = true;
+            txtBcedEmpleadoEli.Size = new Size(255, 27);
+            txtBcedEmpleadoEli.TabIndex = 114;
+            // 
+            // txtBidEmpleadoEli
+            // 
+            txtBidEmpleadoEli.Location = new Point(186, 47);
+            txtBidEmpleadoEli.Margin = new Padding(3, 4, 3, 4);
+            txtBidEmpleadoEli.Name = "txtBidEmpleadoEli";
+            txtBidEmpleadoEli.ReadOnly = true;
+            txtBidEmpleadoEli.Size = new Size(255, 27);
+            txtBidEmpleadoEli.TabIndex = 113;
+            // 
+            // txtBnomEmpleadoEli
+            // 
+            txtBnomEmpleadoEli.Location = new Point(186, 117);
+            txtBnomEmpleadoEli.Margin = new Padding(3, 4, 3, 4);
+            txtBnomEmpleadoEli.Name = "txtBnomEmpleadoEli";
+            txtBnomEmpleadoEli.ReadOnly = true;
+            txtBnomEmpleadoEli.Size = new Size(255, 27);
+            txtBnomEmpleadoEli.TabIndex = 115;
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(123, 127);
+            label17.Location = new Point(107, 154);
             label17.Name = "label17";
-            label17.Size = new Size(67, 20);
-            label17.TabIndex = 99;
-            label17.Text = "Nombre:";
-            // 
-            // textBox16
-            // 
-            textBox16.Location = new Point(192, 225);
-            textBox16.Margin = new Padding(3, 4, 3, 4);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(119, 27);
-            textBox16.TabIndex = 107;
+            label17.Size = new Size(69, 20);
+            label17.TabIndex = 111;
+            label17.Text = "Apellido:";
             // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(131, 93);
+            label20.Location = new Point(122, 190);
             label20.Name = "label20";
             label20.Size = new Size(58, 20);
-            label20.TabIndex = 101;
-            label20.Text = "Cedula:";
+            label20.TabIndex = 119;
+            label20.Text = "Salario:";
             // 
-            // label18
+            // txtBapeEmpleadoEli
             // 
-            label18.AutoSize = true;
-            label18.Location = new Point(123, 161);
-            label18.Name = "label18";
-            label18.Size = new Size(69, 20);
-            label18.TabIndex = 100;
-            label18.Text = "Apellido:";
+            txtBapeEmpleadoEli.Location = new Point(186, 151);
+            txtBapeEmpleadoEli.Margin = new Padding(3, 4, 3, 4);
+            txtBapeEmpleadoEli.Name = "txtBapeEmpleadoEli";
+            txtBapeEmpleadoEli.ReadOnly = true;
+            txtBapeEmpleadoEli.Size = new Size(255, 27);
+            txtBapeEmpleadoEli.TabIndex = 117;
+            // 
+            // txtBfecEmpleadoEli
+            // 
+            txtBfecEmpleadoEli.Location = new Point(186, 226);
+            txtBfecEmpleadoEli.Margin = new Padding(3, 4, 3, 4);
+            txtBfecEmpleadoEli.Name = "txtBfecEmpleadoEli";
+            txtBfecEmpleadoEli.ReadOnly = true;
+            txtBfecEmpleadoEli.Size = new Size(255, 27);
+            txtBfecEmpleadoEli.TabIndex = 118;
+            // 
+            // txtBsalEmpleadoEli
+            // 
+            txtBsalEmpleadoEli.Location = new Point(186, 187);
+            txtBsalEmpleadoEli.Margin = new Padding(3, 4, 3, 4);
+            txtBsalEmpleadoEli.Name = "txtBsalEmpleadoEli";
+            txtBsalEmpleadoEli.ReadOnly = true;
+            txtBsalEmpleadoEli.Size = new Size(255, 27);
+            txtBsalEmpleadoEli.TabIndex = 120;
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(53, 229);
+            label19.Location = new Point(122, 86);
             label19.Name = "label19";
-            label19.Size = new Size(150, 20);
-            label19.TabIndex = 105;
-            label19.Text = "Fecha inicio contrato:";
+            label19.Size = new Size(58, 20);
+            label19.TabIndex = 112;
+            label19.Text = "Cedula:";
             // 
-            // textBox13
+            // label18
             // 
-            textBox13.Location = new Point(192, 151);
-            textBox13.Margin = new Padding(3, 4, 3, 4);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(119, 27);
-            textBox13.TabIndex = 106;
-            // 
-            // textBox15
-            // 
-            textBox15.Location = new Point(192, 187);
-            textBox15.Margin = new Padding(3, 4, 3, 4);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(119, 27);
-            textBox15.TabIndex = 109;
+            label18.AutoSize = true;
+            label18.Location = new Point(30, 229);
+            label18.Name = "label18";
+            label18.Size = new Size(150, 20);
+            label18.TabIndex = 116;
+            label18.Text = "Fecha inicio contrato:";
             // 
             // label26
             // 
@@ -629,6 +652,13 @@
             label26.TabIndex = 88;
             label26.Text = "EMPLEADO";
             label26.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(197, 260);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(294, 27);
+            dateTimePicker1.TabIndex = 109;
             // 
             // Form_Empleado
             // 
@@ -671,50 +701,52 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private Button BAgregar;
-        private Label label10;
-        private Label label9;
-        private TextBox textBox14;
-        private Label label4;
-        private Label label1;
-        private TextBox textBox10;
-        private TextBox textBox9;
-        private TextBox textBox8;
         private TabPage tabPage2;
         private Button button1;
         private Label label21;
-        private Label label5;
         private Label label22;
-        private Label label6;
-        private TextBox textBox2;
-        private Label label7;
-        private TextBox textBox6;
-        private TextBox textBox1;
-        private Label label13;
-        private Label label8;
-        private TextBox textBox5;
-        private Label label12;
-        private TextBox textBox4;
-        private TextBox textBox3;
         private TabPage tabPage7;
         private Button button2;
-        private TextBox textBox12;
-        private Label label14;
-        private TextBox textBox18;
-        private Label label15;
-        private TextBox textBox17;
-        private Label label16;
-        private Label label25;
-        private Label label17;
-        private TextBox textBox16;
-        private Label label20;
-        private Label label18;
-        private Label label19;
-        private TextBox textBox13;
-        private TextBox textBox15;
-        private Label label11;
-        private TextBox textBox11;
-        private TextBox textBox7;
-        private Label label2;
         private Label label26;
+        private Label label1;
+        private Label label2;
+        private Label label4;
+        private TextBox txtBidEmpleadoRegistrar;
+        private Label label9;
+        private TextBox txtBapeEmpleadoRegistrar;
+        private TextBox txtBsalEmpleadoRegistrar;
+        private Label label10;
+        private Label label11;
+        private TextBox txtBfecEmpleadoRegistrar;
+        private Label label25;
+        private TextBox txtBnomEmpleadoRegistrar;
+        private TextBox txtBcedEmpleadoRegistrar;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private TextBox txtBidEmpleadoAct;
+        private Label label8;
+        private TextBox txtBapeEmpleadoAct;
+        private TextBox txtBsalEmpleadoAct;
+        private Label label12;
+        private Label label13;
+        private TextBox txtBfecEmpleadoAct;
+        private Label label27;
+        private TextBox txtBnomEmpleadoAct;
+        private TextBox txtBcedEmpleadoAct;
+        private Label label14;
+        private Label label15;
+        private Label label16;
+        private TextBox txtBcedEmpleadoEli;
+        private TextBox txtBidEmpleadoEli;
+        private TextBox txtBnomEmpleadoEli;
+        private Label label17;
+        private Label label20;
+        private TextBox txtBapeEmpleadoEli;
+        private TextBox txtBfecEmpleadoEli;
+        private TextBox txtBsalEmpleadoEli;
+        private Label label19;
+        private Label label18;
+        private DateTimePicker dateTimePicker1;
     }
 }

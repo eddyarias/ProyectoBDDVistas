@@ -11,7 +11,12 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     public class metodos_Sql_Empleado
     {
-        public string tabla = "VISTA_EMPLEADO";
+        //cuando ustedes hagan descomenten este
+        //public string tabla = "VISTA_EMPLEADO";
+        // y comente este de abajo
+        public string tabla = "EMPLEADO_02";
+        public string idTaller = "TALL002";
+
 
         public void DesplegarDatosEmpleados(SqlConnection conexion, DataGridView dataGridView)
         {
@@ -118,8 +123,9 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
         /// <param name="conexion"></param>
         /// <param name="idEmpleado"></param>
         /// <param name="idTaller"></param>
-        public void EliminarDatosEmpleado(SqlConnection conexion, string idEmpleado, string idTaller)
+        public void EliminarDatosEmpleado(SqlConnection conexion, string idEmpleado)
         {
+            
             try
             {
                 if (conexion.State != ConnectionState.Open)
@@ -127,15 +133,30 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
                     conexion.Open();
                 }
 
-                // Crear el comando SQL para la eliminación de datos
-                SqlCommand cmd = new SqlCommand($"DELETE FROM {tabla} WHERE ID_EMPLEADO = @IdEmpleado AND ID_TALLER = @IdTaller", conexion);
+                // Confirmación antes de eliminar
+                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este empleado con id: "+idEmpleado+"?", "Confirmación de Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                // Asignar valores a los parámetros utilizando el ID_EMPLEADO y ID_TALLER
-                cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
-                cmd.Parameters.AddWithValue("@IdTaller", idTaller);
+                if (result == DialogResult.Yes)
+                {
+                    // Crear el comando SQL para la eliminación de datos
+                    SqlCommand cmd = new SqlCommand($"DELETE FROM {tabla} WHERE ID_EMPLEADO = @IdEmpleado", conexion);
 
-                // Ejecutar la consulta
-                cmd.ExecuteNonQuery();
+                    // Asignar valores a los parámetros utilizando el ID_EMPLEADO
+                    cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+
+                    // Ejecutar la consulta
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    // Confirmación después de eliminar
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Empleado eliminado correctamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el empleado para eliminar.", "Eliminación Fallida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -149,5 +170,56 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
                 }
             }
         }
+
+        public Empleado BuscarEmpleadoPorId(SqlConnection conexion, string idEmpleado)
+        {
+            Empleado empleado = null;
+
+            try
+            {
+                if (conexion.State != ConnectionState.Open)
+                {
+                    conexion.Open();
+                }
+
+                // Crear el comando SQL para buscar datos del empleado por ID_EMPLEADO
+                SqlCommand cmd = new SqlCommand($"SELECT * FROM {tabla} WHERE ID_EMPLEADO = @IdEmpleado", conexion);
+
+                // Asignar valor al parámetro
+                cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+
+                // Ejecutar la consulta y leer los resultados
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Crear un objeto Empleado con los datos obtenidos
+                        empleado = new Empleado(
+                            reader["ID_EMPLEADO"].ToString(),
+                            reader["ID_TALLER"].ToString(),
+                            reader["NUMCED_EMPLEADO"].ToString(),
+                            reader["NOMBRE_EMPLEADO"].ToString(),
+                            reader["APELLIDO_EMPLEADO"].ToString(),
+                            Convert.ToDecimal(reader["SALARIO_EMPLEADO"]),
+                            Convert.ToDateTime(reader["FECHAINICIOCONTRATO_EMPLEADO"])
+                        );
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar datos del empleado: " + ex.Message);
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+
+            return empleado;
+        }
+
     }
 }

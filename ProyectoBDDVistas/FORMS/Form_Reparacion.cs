@@ -16,12 +16,22 @@ namespace ProyectoBDDVistas.FORMS
     {
         public SqlConnection Conexion;
         public metodos_Sql_Reparacion msr;
+        public metodos_Sql_Cliente msc;
+        public metodos_Sql_Vehiculo msv;
         public Form_Reparacion(SqlConnection conexion)
         {
             InitializeComponent();
             Conexion = conexion;
             msr = new metodos_Sql_Reparacion();
-            msr.DesplegarDatosReparacion(conexion, DGWReparacion);
+            msr.DesplegarDatosReparacion(Conexion, DGWReparacion);
+
+            msc = new metodos_Sql_Cliente();
+            msc.DesplegarDatosClientes(Conexion, dGWClienteRegistro);
+            //msc.DesplegarDatosClientes(Conexion, dGWClienteAct);
+
+            msv = new metodos_Sql_Vehiculo();
+            msv.DesplegarDatosVehiculos(Conexion, dGWVehiculoRegistrar);
+            //msv.DesplegarDatosVehiculos(Conexion, dGWVehiculoAct);
         }
 
         private void DGWReparacion_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -34,6 +44,11 @@ namespace ProyectoBDDVistas.FORMS
             int height = DGWReparacion.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + DGWReparacion.ColumnHeadersHeight + 3;
 
             DGWReparacion.ClientSize = new Size(width, height);
+        }
+
+        private void bttAgregarRegistrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
