@@ -19,6 +19,8 @@ namespace ProyectoBDDVistas.FORMS
         public SqlConnection Conexion;
         public metodos_Sql_Empleado mse;
         public Empleado empleado;
+        public string idEmpleadoActEli;
+        public Empleado EmpleadoSeccionadoActual;
 
         public Form_Empleado(SqlConnection conexion)
         {
@@ -42,9 +44,9 @@ namespace ProyectoBDDVistas.FORMS
 
         private void BAgregar_Click(object sender, EventArgs e)
         {
-            empleado = new Empleado(txtBidEmpleadoRegistrar.Text, mse.idTaller, 
-            txtBCedEmpleadoRegistrar.Text, txtBNomEmpleadoRegistrar.Text, 
-            txtBApeEmpleadoRegistrar.Text, decimal.Parse(txtBSalEmpleadoRegistrar.Text),
+            empleado = new Empleado(txtBidEmpleadoRegistrar.Text, mse.idTaller,
+            txtBcedEmpleadoRegistrar.Text, txtBnomEmpleadoRegistrar.Text,
+            txtBapeEmpleadoRegistrar.Text, decimal.Parse(txtBsalEmpleadoRegistrar.Text),
             DateTime.Parse(txtBfecEmpleadoRegistrar.Text));
 
             mse.InsertarDatosEmpleado(Conexion, empleado);
@@ -52,6 +54,60 @@ namespace ProyectoBDDVistas.FORMS
             //actualizar la tabla 
             mse.DesplegarDatosEmpleados(Conexion, DGWEmpleado);
 
+        }
+
+        //boton actualizar
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Empleado empleadoActualizar = new Empleado(txtBidEmpleadoAct.Text, mse.idTaller,
+            txtBcedEmpleadoAct.Text, txtBnomEmpleadoAct.Text,
+            txtBapeEmpleadoAct.Text, decimal.Parse(txtBsalEmpleadoAct.Text),
+             DateTime.Parse(txtBfecEmpleadoAct.Text));
+
+            mse.ActualizarDatosEmpleado(Conexion, empleadoActualizar);
+            //actualizar la tabla 
+            mse.DesplegarDatosEmpleados(Conexion, DGWEmpleado);
+        }
+
+        private void DGWEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
+            {
+                // Obtenemos el valor de la celda en la columna deseada
+                idEmpleadoActEli = DGWEmpleado.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            }
+
+            EmpleadoSeccionadoActual = mse.BuscarEmpleadoPorId(Conexion, idEmpleadoActEli);
+
+            desplegarEmpleadoActualizarEliminar();
+        }
+
+        private void desplegarEmpleadoActualizarEliminar()
+        {
+            if (EmpleadoSeccionadoActual != null)
+            {
+                txtBidEmpleadoAct.Text = EmpleadoSeccionadoActual.IdEmpleado.Trim();
+                txtBcedEmpleadoAct.Text = EmpleadoSeccionadoActual.NumCedulaEmpleado.Trim();
+                txtBnomEmpleadoAct.Text = EmpleadoSeccionadoActual.NombreEmpleado.Trim();
+                txtBapeEmpleadoAct.Text = EmpleadoSeccionadoActual.ApellidoEmpleado.Trim();
+                txtBsalEmpleadoAct.Text = EmpleadoSeccionadoActual.SalarioEmpleado + "".Trim();
+                txtBfecEmpleadoAct.Text = EmpleadoSeccionadoActual.FechaInicioContratoEmpleado + "".Trim();
+
+                txtBidEmpleadoEli.Text = EmpleadoSeccionadoActual.IdEmpleado.Trim();
+                txtBcedEmpleadoEli.Text = EmpleadoSeccionadoActual.NumCedulaEmpleado.Trim();
+                txtBnomEmpleadoEli.Text = EmpleadoSeccionadoActual.NombreEmpleado.Trim();
+                txtBapeEmpleadoEli.Text = EmpleadoSeccionadoActual.ApellidoEmpleado.Trim();
+                txtBsalEmpleadoEli.Text = EmpleadoSeccionadoActual.SalarioEmpleado + "".Trim();
+                txtBfecEmpleadoEli.Text = EmpleadoSeccionadoActual.FechaInicioContratoEmpleado + "".Trim();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mse.EliminarDatosEmpleado(Conexion, txtBidEmpleadoEli.Text.Trim());
+            //actualizar la tabla 
+            mse.DesplegarDatosEmpleados(Conexion, DGWEmpleado);
         }
     }
 }
