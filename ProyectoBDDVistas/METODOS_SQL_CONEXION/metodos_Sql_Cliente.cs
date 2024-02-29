@@ -11,7 +11,8 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     public class metodos_Sql_Cliente
     {
-        public string tabla = "CLIENTE";
+        public string tabla = "CLIENTE_02";
+        public string idTaller = "TALL002";
 
         public void DesplegarDatosClientes(SqlConnection conexion, DataGridView dataGridView)
         {
@@ -93,7 +94,13 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
                 cmd.Parameters.AddWithValue("@DireccionCliente", cliente.DireccionCliente);
 
                 // Ejecutar la consulta
-                cmd.ExecuteNonQuery();
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                // Mostrar mensaje de confirmación después de la actualización
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Datos del cliente actualizados con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -108,27 +115,41 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
             }
         }
 
-        public void EliminarDatosCliente(SqlConnection conexion, string idTaller)
+        public void EliminarClientePorNombreApellido(SqlConnection conexion, string nombreCliente, string apellidoCliente)
         {
             try
             {
-                if (conexion.State != ConnectionState.Open)
+                if (MessageBox.Show("¿Seguro que deseas eliminar al cliente "+ nombreCliente.Trim() + " "+ apellidoCliente.Trim() + "?", "Confirmación de Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    conexion.Open();
+                    if (conexion.State != ConnectionState.Open)
+                    {
+                        conexion.Open();
+                    }
+
+                    // Crear el comando SQL para la eliminación de datos
+                    SqlCommand cmd = new SqlCommand($"DELETE FROM {tabla} WHERE NOMBRE_CLIENTE = @NombreCliente AND APELLIDO_CLIENTE = @ApellidoCliente", conexion);
+
+                    // Asignar valores a los parámetros
+                    cmd.Parameters.AddWithValue("@NombreCliente", nombreCliente);
+                    cmd.Parameters.AddWithValue("@ApellidoCliente", apellidoCliente);
+
+                    // Ejecutar la consulta
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    // Mostrar mensaje de confirmación después de la eliminación
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Cliente eliminado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el cliente para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-
-                // Crear el comando SQL para la eliminación de datos
-                SqlCommand cmd = new SqlCommand($"DELETE FROM {tabla} WHERE ID_TALLER = @IdTaller", conexion);
-
-                // Asignar valor al parámetro utilizando el ID_TALLER
-                cmd.Parameters.AddWithValue("@IdTaller", idTaller);
-
-                // Ejecutar la consulta
-                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al eliminar datos: " + ex.Message);
+                MessageBox.Show("Error al eliminar datos del cliente: " + ex.Message);
             }
             finally
             {
@@ -137,6 +158,55 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
                     conexion.Close();
                 }
             }
+        }
+
+        public Cliente ObtenerClientePorNombreApellido(SqlConnection conexion, string nombreCliente, string apellidoCliente)
+        {
+            Cliente cliente = null;
+
+            try
+            {
+                if (conexion.State != ConnectionState.Open)
+                {
+                    conexion.Open();
+                }
+
+                // Crear el comando SQL para obtener datos del cliente por nombre y apellido
+                SqlCommand cmd = new SqlCommand($"SELECT * FROM {tabla} WHERE NOMBRE_CLIENTE = @NombreCliente AND APELLIDO_CLIENTE = @ApellidoCliente", conexion);
+
+                // Asignar valores a los parámetros
+                cmd.Parameters.AddWithValue("@NombreCliente", nombreCliente);
+                cmd.Parameters.AddWithValue("@ApellidoCliente", apellidoCliente);
+
+                // Ejecutar la consulta y leer los resultados
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Crear un objeto Cliente con los datos obtenidos
+                        cliente = new Cliente(
+                            reader["NOMBRE_CLIENTE"].ToString(),
+                            reader["APELLIDO_CLIENTE"].ToString(),
+                            reader["ID_TALLER"].ToString(),
+                            reader["NUMCEDULA_CLIENTE"].ToString(),
+                            reader["DIRECCION_CLIENTE"].ToString()
+                        );
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener datos del cliente: " + ex.Message);
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+
+            return cliente;
         }
 
     }

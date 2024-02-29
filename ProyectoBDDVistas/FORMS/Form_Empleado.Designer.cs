@@ -42,15 +42,15 @@
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
-            textBox14 = new TextBox();
+            txtBSalEmpleadoRegistrar = new TextBox();
             label4 = new Label();
             label1 = new Label();
-            textBox11 = new TextBox();
-            textBox10 = new TextBox();
-            textBox9 = new TextBox();
-            textBox7 = new TextBox();
+            txtBidEmpleadoRegistrar = new TextBox();
+            txtBCedEmpleadoRegistrar = new TextBox();
+            txtBNomEmpleadoRegistrar = new TextBox();
+            txtBfecEmpleadoRegistrar = new TextBox();
             label2 = new Label();
-            textBox8 = new TextBox();
+            txtBApeEmpleadoRegistrar = new TextBox();
             tabPage2 = new TabPage();
             button1 = new Button();
             label21 = new Label();
@@ -188,15 +188,15 @@
             tabPage1.Controls.Add(label11);
             tabPage1.Controls.Add(label10);
             tabPage1.Controls.Add(label9);
-            tabPage1.Controls.Add(textBox14);
+            tabPage1.Controls.Add(txtBSalEmpleadoRegistrar);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(label1);
-            tabPage1.Controls.Add(textBox11);
-            tabPage1.Controls.Add(textBox10);
-            tabPage1.Controls.Add(textBox9);
-            tabPage1.Controls.Add(textBox7);
+            tabPage1.Controls.Add(txtBidEmpleadoRegistrar);
+            tabPage1.Controls.Add(txtBCedEmpleadoRegistrar);
+            tabPage1.Controls.Add(txtBNomEmpleadoRegistrar);
+            tabPage1.Controls.Add(txtBfecEmpleadoRegistrar);
             tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(textBox8);
+            tabPage1.Controls.Add(txtBApeEmpleadoRegistrar);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -207,12 +207,13 @@
             // 
             // BAgregar
             // 
-            BAgregar.Location = new Point(171, 282);
+            BAgregar.Location = new Point(197, 277);
             BAgregar.Name = "BAgregar";
             BAgregar.Size = new Size(94, 37);
             BAgregar.TabIndex = 75;
             BAgregar.Text = "Registrar";
             BAgregar.UseVisualStyleBackColor = true;
+            BAgregar.Click += BAgregar_Click;
             // 
             // label11
             // 
@@ -241,13 +242,13 @@
             label9.TabIndex = 52;
             label9.Text = "Apellido:";
             // 
-            // textBox14
+            // txtBSalEmpleadoRegistrar
             // 
-            textBox14.Location = new Point(197, 191);
-            textBox14.Margin = new Padding(3, 4, 3, 4);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(119, 27);
-            textBox14.TabIndex = 69;
+            txtBSalEmpleadoRegistrar.Location = new Point(216, 194);
+            txtBSalEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBSalEmpleadoRegistrar.Name = "txtBSalEmpleadoRegistrar";
+            txtBSalEmpleadoRegistrar.Size = new Size(119, 27);
+            txtBSalEmpleadoRegistrar.TabIndex = 69;
             // 
             // label4
             // 
@@ -267,37 +268,37 @@
             label1.TabIndex = 68;
             label1.Text = "Salario:";
             // 
-            // textBox11
+            // txtBidEmpleadoRegistrar
             // 
-            textBox11.Location = new Point(197, 51);
-            textBox11.Margin = new Padding(3, 4, 3, 4);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(119, 27);
-            textBox11.TabIndex = 54;
+            txtBidEmpleadoRegistrar.Location = new Point(216, 51);
+            txtBidEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBidEmpleadoRegistrar.Name = "txtBidEmpleadoRegistrar";
+            txtBidEmpleadoRegistrar.Size = new Size(119, 27);
+            txtBidEmpleadoRegistrar.TabIndex = 54;
             // 
-            // textBox10
+            // txtBCedEmpleadoRegistrar
             // 
-            textBox10.Location = new Point(197, 87);
-            textBox10.Margin = new Padding(3, 4, 3, 4);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(119, 27);
-            textBox10.TabIndex = 55;
+            txtBCedEmpleadoRegistrar.Location = new Point(216, 87);
+            txtBCedEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBCedEmpleadoRegistrar.Name = "txtBCedEmpleadoRegistrar";
+            txtBCedEmpleadoRegistrar.Size = new Size(119, 27);
+            txtBCedEmpleadoRegistrar.TabIndex = 55;
             // 
-            // textBox9
+            // txtBNomEmpleadoRegistrar
             // 
-            textBox9.Location = new Point(197, 120);
-            textBox9.Margin = new Padding(3, 4, 3, 4);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(119, 27);
-            textBox9.TabIndex = 56;
+            txtBNomEmpleadoRegistrar.Location = new Point(216, 120);
+            txtBNomEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBNomEmpleadoRegistrar.Name = "txtBNomEmpleadoRegistrar";
+            txtBNomEmpleadoRegistrar.Size = new Size(119, 27);
+            txtBNomEmpleadoRegistrar.TabIndex = 56;
             // 
-            // textBox7
+            // txtBfecEmpleadoRegistrar
             // 
-            textBox7.Location = new Point(197, 229);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(119, 27);
-            textBox7.TabIndex = 64;
+            txtBfecEmpleadoRegistrar.Location = new Point(216, 229);
+            txtBfecEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBfecEmpleadoRegistrar.Name = "txtBfecEmpleadoRegistrar";
+            txtBfecEmpleadoRegistrar.Size = new Size(119, 27);
+            txtBfecEmpleadoRegistrar.TabIndex = 64;
             // 
             // label2
             // 
@@ -308,13 +309,13 @@
             label2.TabIndex = 57;
             label2.Text = "Fecha inicio contrato:";
             // 
-            // textBox8
+            // txtBApeEmpleadoRegistrar
             // 
-            textBox8.Location = new Point(197, 155);
-            textBox8.Margin = new Padding(3, 4, 3, 4);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(119, 27);
-            textBox8.TabIndex = 63;
+            txtBApeEmpleadoRegistrar.Location = new Point(216, 155);
+            txtBApeEmpleadoRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBApeEmpleadoRegistrar.Name = "txtBApeEmpleadoRegistrar";
+            txtBApeEmpleadoRegistrar.Size = new Size(119, 27);
+            txtBApeEmpleadoRegistrar.TabIndex = 63;
             // 
             // tabPage2
             // 
@@ -673,12 +674,12 @@
         private Button BAgregar;
         private Label label10;
         private Label label9;
-        private TextBox textBox14;
+        private TextBox txtBSalEmpleadoRegistrar;
         private Label label4;
         private Label label1;
-        private TextBox textBox10;
-        private TextBox textBox9;
-        private TextBox textBox8;
+        private TextBox txtBCedEmpleadoRegistrar;
+        private TextBox txtBNomEmpleadoRegistrar;
+        private TextBox txtBApeEmpleadoRegistrar;
         private TabPage tabPage2;
         private Button button1;
         private Label label21;
@@ -712,8 +713,8 @@
         private TextBox textBox13;
         private TextBox textBox15;
         private Label label11;
-        private TextBox textBox11;
-        private TextBox textBox7;
+        private TextBox txtBidEmpleadoRegistrar;
+        private TextBox txtBfecEmpleadoRegistrar;
         private Label label2;
         private Label label26;
     }

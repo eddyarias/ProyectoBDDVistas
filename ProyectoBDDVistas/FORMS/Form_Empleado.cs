@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using ProyectoBDDVistas.CLASES;
 using ProyectoBDDVistas.METODOS_SQL_CONEXION;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,14 @@ namespace ProyectoBDDVistas.FORMS
     {
         public SqlConnection Conexion;
         public metodos_Sql_Empleado mse;
+        public Empleado empleado;
+
         public Form_Empleado(SqlConnection conexion)
         {
             InitializeComponent();
             Conexion = conexion;
             mse = new metodos_Sql_Empleado();
-            mse.DesplegarDatosEmpleados(conexion, DGWEmpleado);
+            mse.DesplegarDatosEmpleados(Conexion, DGWEmpleado);
         }
 
         private void DGWEmpleado_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -35,6 +38,20 @@ namespace ProyectoBDDVistas.FORMS
             int height = DGWEmpleado.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + DGWEmpleado.ColumnHeadersHeight + 3;
 
             DGWEmpleado.ClientSize = new Size(width, height);
+        }
+
+        private void BAgregar_Click(object sender, EventArgs e)
+        {
+            empleado = new Empleado(txtBidEmpleadoRegistrar.Text, mse.idTaller, 
+            txtBCedEmpleadoRegistrar.Text, txtBNomEmpleadoRegistrar.Text, 
+            txtBApeEmpleadoRegistrar.Text, decimal.Parse(txtBSalEmpleadoRegistrar.Text),
+            DateTime.Parse(txtBfecEmpleadoRegistrar.Text));
+
+            mse.InsertarDatosEmpleado(Conexion, empleado);
+
+            //actualizar la tabla 
+            mse.DesplegarDatosEmpleados(Conexion, DGWEmpleado);
+
         }
     }
 }
