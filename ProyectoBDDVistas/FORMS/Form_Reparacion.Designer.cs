@@ -34,42 +34,42 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             label3 = new Label();
-            dataGridView2 = new DataGridView();
-            dataGridView1 = new DataGridView();
+            dGWVehiculoRegistrar = new DataGridView();
+            dGWClienteRegistro = new DataGridView();
             label34 = new Label();
             panel4 = new Panel();
-            button3 = new Button();
-            dateTimePicker2 = new DateTimePicker();
-            richTextBox1 = new RichTextBox();
+            bttAgregarRegistrar = new Button();
+            dTPFecRepRegistrar = new DateTimePicker();
+            rTBObseRepRegistrar = new RichTextBox();
             label41 = new Label();
-            comboBox2 = new ComboBox();
-            textBox7 = new TextBox();
+            cBTipoRepRegistrar = new ComboBox();
+            txtidRepRegistrar = new TextBox();
             label1 = new Label();
             label38 = new Label();
-            textBox9 = new TextBox();
+            txtPreRepRegistrar = new TextBox();
             label39 = new Label();
             label40 = new Label();
             label30 = new Label();
             panel1 = new Panel();
-            textBox4 = new TextBox();
-            textBox1 = new TextBox();
+            txtBDirClienteReparacionRegistro = new TextBox();
+            txtBCedClienteReparacionRegistro = new TextBox();
             label28 = new Label();
             label23 = new Label();
-            textBox3 = new TextBox();
+            txtBApeClienteReparacionRegistro = new TextBox();
             label24 = new Label();
             label26 = new Label();
-            textBox2 = new TextBox();
+            txtBnomClienteReparacionRegistro = new TextBox();
             label29 = new Label();
             panel2 = new Panel();
-            comboBox1 = new ComboBox();
+            cBNumMatVehiculoRepRegistrar = new ComboBox();
             label32 = new Label();
             label33 = new Label();
-            textBox8 = new TextBox();
+            txtBFecVehRepRegistrar = new TextBox();
             tabPage2 = new TabPage();
             label4 = new Label();
             label5 = new Label();
-            dataGridView3 = new DataGridView();
-            dataGridView4 = new DataGridView();
+            dGWVehiculoAct = new DataGridView();
+            dGWClienteAct = new DataGridView();
             label6 = new Label();
             panel3 = new Panel();
             button1 = new Button();
@@ -133,14 +133,14 @@
             ((System.ComponentModel.ISupportInitialize)DGWReparacion).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dGWVehiculoRegistrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dGWClienteRegistro).BeginInit();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dGWVehiculoAct).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dGWClienteAct).BeginInit();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
@@ -199,8 +199,8 @@
             // tabPage1
             // 
             tabPage1.Controls.Add(label3);
-            tabPage1.Controls.Add(dataGridView2);
-            tabPage1.Controls.Add(dataGridView1);
+            tabPage1.Controls.Add(dGWVehiculoRegistrar);
+            tabPage1.Controls.Add(dGWClienteRegistro);
             tabPage1.Controls.Add(label34);
             tabPage1.Controls.Add(panel4);
             tabPage1.Controls.Add(label30);
@@ -224,23 +224,23 @@
             label3.TabIndex = 119;
             label3.Text = "Seleccione el vehiculo para esta reparación:";
             // 
-            // dataGridView2
+            // dGWVehiculoRegistrar
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(599, 208);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(376, 131);
-            dataGridView2.TabIndex = 117;
+            dGWVehiculoRegistrar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGWVehiculoRegistrar.Location = new Point(599, 208);
+            dGWVehiculoRegistrar.Name = "dGWVehiculoRegistrar";
+            dGWVehiculoRegistrar.RowHeadersWidth = 51;
+            dGWVehiculoRegistrar.Size = new Size(376, 131);
+            dGWVehiculoRegistrar.TabIndex = 117;
             // 
-            // dataGridView1
+            // dGWClienteRegistro
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(19, 291);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(559, 165);
-            dataGridView1.TabIndex = 116;
+            dGWClienteRegistro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGWClienteRegistro.Location = new Point(19, 291);
+            dGWClienteRegistro.Name = "dGWClienteRegistro";
+            dGWClienteRegistro.RowHeadersWidth = 51;
+            dGWClienteRegistro.Size = new Size(559, 165);
+            dGWClienteRegistro.TabIndex = 116;
             // 
             // label34
             // 
@@ -254,15 +254,15 @@
             // panel4
             // 
             panel4.BorderStyle = BorderStyle.FixedSingle;
-            panel4.Controls.Add(button3);
-            panel4.Controls.Add(dateTimePicker2);
-            panel4.Controls.Add(richTextBox1);
+            panel4.Controls.Add(bttAgregarRegistrar);
+            panel4.Controls.Add(dTPFecRepRegistrar);
+            panel4.Controls.Add(rTBObseRepRegistrar);
             panel4.Controls.Add(label41);
-            panel4.Controls.Add(comboBox2);
-            panel4.Controls.Add(textBox7);
+            panel4.Controls.Add(cBTipoRepRegistrar);
+            panel4.Controls.Add(txtidRepRegistrar);
             panel4.Controls.Add(label1);
             panel4.Controls.Add(label38);
-            panel4.Controls.Add(textBox9);
+            panel4.Controls.Add(txtPreRepRegistrar);
             panel4.Controls.Add(label39);
             panel4.Controls.Add(label40);
             panel4.Location = new Point(986, 64);
@@ -270,29 +270,30 @@
             panel4.Size = new Size(455, 385);
             panel4.TabIndex = 115;
             // 
-            // button3
+            // bttAgregarRegistrar
             // 
-            button3.Location = new Point(189, 341);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 113;
-            button3.Text = "Agregar";
-            button3.UseVisualStyleBackColor = true;
+            bttAgregarRegistrar.Location = new Point(189, 341);
+            bttAgregarRegistrar.Name = "bttAgregarRegistrar";
+            bttAgregarRegistrar.Size = new Size(94, 29);
+            bttAgregarRegistrar.TabIndex = 113;
+            bttAgregarRegistrar.Text = "Agregar";
+            bttAgregarRegistrar.UseVisualStyleBackColor = true;
+            bttAgregarRegistrar.Click += bttAgregarRegistrar_Click;
             // 
-            // dateTimePicker2
+            // dTPFecRepRegistrar
             // 
-            dateTimePicker2.Location = new Point(133, 98);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(290, 27);
-            dateTimePicker2.TabIndex = 112;
+            dTPFecRepRegistrar.Location = new Point(133, 98);
+            dTPFecRepRegistrar.Name = "dTPFecRepRegistrar";
+            dTPFecRepRegistrar.Size = new Size(290, 27);
+            dTPFecRepRegistrar.TabIndex = 112;
             // 
-            // richTextBox1
+            // rTBObseRepRegistrar
             // 
-            richTextBox1.Location = new Point(138, 191);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(285, 127);
-            richTextBox1.TabIndex = 111;
-            richTextBox1.Text = "";
+            rTBObseRepRegistrar.Location = new Point(132, 191);
+            rTBObseRepRegistrar.Name = "rTBObseRepRegistrar";
+            rTBObseRepRegistrar.Size = new Size(285, 127);
+            rTBObseRepRegistrar.TabIndex = 111;
+            rTBObseRepRegistrar.Text = "";
             // 
             // label41
             // 
@@ -303,21 +304,21 @@
             label41.TabIndex = 110;
             label41.Text = "Precio:";
             // 
-            // comboBox2
+            // cBTipoRepRegistrar
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(133, 59);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(213, 28);
-            comboBox2.TabIndex = 109;
+            cBTipoRepRegistrar.FormattingEnabled = true;
+            cBTipoRepRegistrar.Location = new Point(133, 59);
+            cBTipoRepRegistrar.Name = "cBTipoRepRegistrar";
+            cBTipoRepRegistrar.Size = new Size(213, 28);
+            cBTipoRepRegistrar.TabIndex = 109;
             // 
-            // textBox7
+            // txtidRepRegistrar
             // 
-            textBox7.Location = new Point(133, 21);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(213, 27);
-            textBox7.TabIndex = 102;
+            txtidRepRegistrar.Location = new Point(133, 21);
+            txtidRepRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtidRepRegistrar.Name = "txtidRepRegistrar";
+            txtidRepRegistrar.Size = new Size(213, 27);
+            txtidRepRegistrar.TabIndex = 102;
             // 
             // label1
             // 
@@ -337,13 +338,13 @@
             label38.TabIndex = 101;
             label38.Text = "Id reparación:";
             // 
-            // textBox9
+            // txtPreRepRegistrar
             // 
-            textBox9.Location = new Point(133, 143);
-            textBox9.Margin = new Padding(3, 4, 3, 4);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(133, 27);
-            textBox9.TabIndex = 106;
+            txtPreRepRegistrar.Location = new Point(133, 143);
+            txtPreRepRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtPreRepRegistrar.Name = "txtPreRepRegistrar";
+            txtPreRepRegistrar.Size = new Size(133, 27);
+            txtPreRepRegistrar.TabIndex = 106;
             // 
             // label39
             // 
@@ -375,35 +376,35 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtBDirClienteReparacionRegistro);
+            panel1.Controls.Add(txtBCedClienteReparacionRegistro);
             panel1.Controls.Add(label28);
             panel1.Controls.Add(label23);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(txtBApeClienteReparacionRegistro);
             panel1.Controls.Add(label24);
             panel1.Controls.Add(label26);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(txtBnomClienteReparacionRegistro);
             panel1.Location = new Point(19, 64);
             panel1.Name = "panel1";
             panel1.Size = new Size(559, 185);
             panel1.TabIndex = 109;
             // 
-            // textBox4
+            // txtBDirClienteReparacionRegistro
             // 
-            textBox4.Location = new Point(190, 130);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.Size = new Size(255, 27);
-            textBox4.TabIndex = 108;
+            txtBDirClienteReparacionRegistro.Location = new Point(190, 130);
+            txtBDirClienteReparacionRegistro.Margin = new Padding(3, 4, 3, 4);
+            txtBDirClienteReparacionRegistro.Name = "txtBDirClienteReparacionRegistro";
+            txtBDirClienteReparacionRegistro.ReadOnly = true;
+            txtBDirClienteReparacionRegistro.Size = new Size(255, 27);
+            txtBDirClienteReparacionRegistro.TabIndex = 108;
             // 
-            // textBox1
+            // txtBCedClienteReparacionRegistro
             // 
-            textBox1.Location = new Point(190, 25);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(255, 27);
-            textBox1.TabIndex = 102;
+            txtBCedClienteReparacionRegistro.Location = new Point(190, 25);
+            txtBCedClienteReparacionRegistro.Margin = new Padding(3, 4, 3, 4);
+            txtBCedClienteReparacionRegistro.Name = "txtBCedClienteReparacionRegistro";
+            txtBCedClienteReparacionRegistro.Size = new Size(255, 27);
+            txtBCedClienteReparacionRegistro.TabIndex = 102;
             // 
             // label28
             // 
@@ -423,13 +424,13 @@
             label23.TabIndex = 101;
             label23.Text = "Cedula:";
             // 
-            // textBox3
+            // txtBApeClienteReparacionRegistro
             // 
-            textBox3.Location = new Point(190, 95);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(255, 27);
-            textBox3.TabIndex = 106;
+            txtBApeClienteReparacionRegistro.Location = new Point(190, 95);
+            txtBApeClienteReparacionRegistro.Margin = new Padding(3, 4, 3, 4);
+            txtBApeClienteReparacionRegistro.Name = "txtBApeClienteReparacionRegistro";
+            txtBApeClienteReparacionRegistro.Size = new Size(255, 27);
+            txtBApeClienteReparacionRegistro.TabIndex = 106;
             // 
             // label24
             // 
@@ -449,13 +450,13 @@
             label26.TabIndex = 105;
             label26.Text = "Apellido:";
             // 
-            // textBox2
+            // txtBnomClienteReparacionRegistro
             // 
-            textBox2.Location = new Point(190, 60);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(255, 27);
-            textBox2.TabIndex = 104;
+            txtBnomClienteReparacionRegistro.Location = new Point(190, 60);
+            txtBnomClienteReparacionRegistro.Margin = new Padding(3, 4, 3, 4);
+            txtBnomClienteReparacionRegistro.Name = "txtBnomClienteReparacionRegistro";
+            txtBnomClienteReparacionRegistro.Size = new Size(255, 27);
+            txtBnomClienteReparacionRegistro.TabIndex = 104;
             // 
             // label29
             // 
@@ -469,22 +470,22 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(cBNumMatVehiculoRepRegistrar);
             panel2.Controls.Add(label32);
             panel2.Controls.Add(label33);
-            panel2.Controls.Add(textBox8);
+            panel2.Controls.Add(txtBFecVehRepRegistrar);
             panel2.Location = new Point(599, 64);
             panel2.Name = "panel2";
             panel2.Size = new Size(373, 103);
             panel2.TabIndex = 111;
             // 
-            // comboBox1
+            // cBNumMatVehiculoRepRegistrar
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(156, 16);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(190, 28);
-            comboBox1.TabIndex = 112;
+            cBNumMatVehiculoRepRegistrar.FormattingEnabled = true;
+            cBNumMatVehiculoRepRegistrar.Location = new Point(156, 16);
+            cBNumMatVehiculoRepRegistrar.Name = "cBNumMatVehiculoRepRegistrar";
+            cBNumMatVehiculoRepRegistrar.Size = new Size(190, 28);
+            cBNumMatVehiculoRepRegistrar.TabIndex = 112;
             // 
             // label32
             // 
@@ -504,21 +505,21 @@
             label33.TabIndex = 103;
             label33.Text = "Fecha compra:";
             // 
-            // textBox8
+            // txtBFecVehRepRegistrar
             // 
-            textBox8.Location = new Point(156, 56);
-            textBox8.Margin = new Padding(3, 4, 3, 4);
-            textBox8.Name = "textBox8";
-            textBox8.ReadOnly = true;
-            textBox8.Size = new Size(190, 27);
-            textBox8.TabIndex = 104;
+            txtBFecVehRepRegistrar.Location = new Point(156, 56);
+            txtBFecVehRepRegistrar.Margin = new Padding(3, 4, 3, 4);
+            txtBFecVehRepRegistrar.Name = "txtBFecVehRepRegistrar";
+            txtBFecVehRepRegistrar.ReadOnly = true;
+            txtBFecVehRepRegistrar.Size = new Size(190, 27);
+            txtBFecVehRepRegistrar.TabIndex = 104;
             // 
             // tabPage2
             // 
             tabPage2.Controls.Add(label4);
             tabPage2.Controls.Add(label5);
-            tabPage2.Controls.Add(dataGridView3);
-            tabPage2.Controls.Add(dataGridView4);
+            tabPage2.Controls.Add(dGWVehiculoAct);
+            tabPage2.Controls.Add(dGWClienteAct);
             tabPage2.Controls.Add(label6);
             tabPage2.Controls.Add(panel3);
             tabPage2.Controls.Add(label12);
@@ -551,23 +552,23 @@
             label5.TabIndex = 128;
             label5.Text = "Seleccione al cliente para esta reparacion:";
             // 
-            // dataGridView3
+            // dGWVehiculoAct
             // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(597, 206);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(376, 131);
-            dataGridView3.TabIndex = 127;
+            dGWVehiculoAct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGWVehiculoAct.Location = new Point(597, 206);
+            dGWVehiculoAct.Name = "dGWVehiculoAct";
+            dGWVehiculoAct.RowHeadersWidth = 51;
+            dGWVehiculoAct.Size = new Size(376, 131);
+            dGWVehiculoAct.TabIndex = 127;
             // 
-            // dataGridView4
+            // dGWClienteAct
             // 
-            dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(17, 289);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.RowHeadersWidth = 51;
-            dataGridView4.Size = new Size(559, 165);
-            dataGridView4.TabIndex = 126;
+            dGWClienteAct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGWClienteAct.Location = new Point(17, 289);
+            dGWClienteAct.Name = "dGWClienteAct";
+            dGWClienteAct.RowHeadersWidth = 51;
+            dGWClienteAct.Size = new Size(559, 165);
+            dGWClienteAct.TabIndex = 126;
             // 
             // label6
             // 
@@ -1161,8 +1162,8 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dGWVehiculoRegistrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dGWClienteRegistro).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel1.ResumeLayout(false);
@@ -1171,8 +1172,8 @@
             panel2.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dGWVehiculoAct).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dGWClienteAct).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel5.ResumeLayout(false);
@@ -1198,42 +1199,42 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private Label label3;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView1;
+        private DataGridView dGWVehiculoRegistrar;
+        private DataGridView dGWClienteRegistro;
         private Label label34;
         private Panel panel4;
-        private Button button3;
-        private DateTimePicker dateTimePicker2;
-        private RichTextBox richTextBox1;
+        private Button bttAgregarRegistrar;
+        private DateTimePicker dTPFecRepRegistrar;
+        private RichTextBox rTBObseRepRegistrar;
         private Label label41;
-        private ComboBox comboBox2;
-        private TextBox textBox7;
+        private ComboBox cBTipoRepRegistrar;
+        private TextBox txtidRepRegistrar;
         private Label label1;
         private Label label38;
-        private TextBox textBox9;
+        private TextBox txtPreRepRegistrar;
         private Label label39;
         private Label label40;
         private Label label30;
         private Panel panel1;
-        private TextBox textBox4;
-        private TextBox textBox1;
+        private TextBox txtBDirClienteReparacionRegistro;
+        private TextBox txtBCedClienteReparacionRegistro;
         private Label label28;
         private Label label23;
-        private TextBox textBox3;
+        private TextBox txtBApeClienteReparacionRegistro;
         private Label label24;
         private Label label26;
-        private TextBox textBox2;
+        private TextBox txtBnomClienteReparacionRegistro;
         private Label label29;
         private Panel panel2;
-        private ComboBox comboBox1;
+        private ComboBox cBNumMatVehiculoRepRegistrar;
         private Label label32;
         private Label label33;
-        private TextBox textBox8;
+        private TextBox txtBFecVehRepRegistrar;
         private TabPage tabPage2;
         private Label label4;
         private Label label5;
-        private DataGridView dataGridView3;
-        private DataGridView dataGridView4;
+        private DataGridView dGWVehiculoAct;
+        private DataGridView dGWClienteAct;
         private Label label6;
         private Panel panel3;
         private Button button1;
