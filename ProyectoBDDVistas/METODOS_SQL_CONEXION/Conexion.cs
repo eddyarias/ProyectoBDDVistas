@@ -10,7 +10,7 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
         public Conexion(string servidor, string nombreBaseDatos, string usuario, string contraseña)
         {
             // Construye la cadena de conexión usando los parámetros
-            string connectionString = $"Data Source={servidor};Initial Catalog={nombreBaseDatos};User ID={usuario};Password={contraseña};TrustServerCertificate=true;";
+            string connectionString = $"Data Source=LAPTOP-MQ2NT5FG\\MSSQLSERVERI;Initial Catalog=TallerReparacionQ;User ID=sa;Password=P@ssw0rd;TrustServerCertificate=true;";
             conexion = new SqlConnection(connectionString);
         }
 

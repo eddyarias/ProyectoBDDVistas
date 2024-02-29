@@ -10,7 +10,7 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     public class metodos_Sql_Reparacion
     {
-        public string tabla = "REPARACION_02";
+        public string tabla = "VISTA_REPARACION";
         public void DesplegarDatosReparacion(SqlConnection conexion, DataGridView dataGridView)
         {
             try

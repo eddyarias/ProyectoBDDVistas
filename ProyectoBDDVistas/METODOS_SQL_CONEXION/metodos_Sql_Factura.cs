@@ -10,7 +10,7 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     public class metodos_Sql_Factura
     {
-        public string tabla = "FACTURA_02";
+        public string tabla = "VISTA_FACTURA";
 
         public void DesplegarDatosFacturas(SqlConnection conexion, DataGridView dataGridView)
         {

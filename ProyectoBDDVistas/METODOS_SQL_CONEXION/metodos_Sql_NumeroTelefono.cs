@@ -10,7 +10,7 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     public class metodos_Sql_NumeroTelefono
     {
-        public string tabla = "NUMEROTELEFONO_02";
+        public string tabla = "VISTA_NUMEROTELEFONO";
 
 
         public void DesplegarDatosNumeroTelefono(SqlConnection conexion, DataGridView dataGridView)
