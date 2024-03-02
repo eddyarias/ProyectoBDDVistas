@@ -11,8 +11,11 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     public class metodos_Sql_Cliente
     {
-        public string tabla = "CLIENTE_02";
-        public string idTaller = "TALL002";
+
+        //public string tabla = "VISTA_CLIENTE";
+
+        public string idTaller = "TALL001";
+
 
         public void DesplegarDatosClientes(SqlConnection conexion, DataGridView dataGridView)
         {

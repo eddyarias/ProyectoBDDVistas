@@ -85,6 +85,7 @@
             label19 = new Label();
             label18 = new Label();
             label26 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DGWEmpleado).BeginInit();
             tabControl1.SuspendLayout();
@@ -181,11 +182,12 @@
             tabControl1.Location = new Point(44, 58);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(549, 374);
+            tabControl1.Size = new Size(549, 412);
             tabControl1.TabIndex = 85;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(dateTimePicker1);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(label4);
@@ -203,7 +205,7 @@
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(541, 341);
+            tabPage1.Size = new Size(541, 379);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Registrar empleado";
             tabPage1.UseVisualStyleBackColor = true;
@@ -320,7 +322,7 @@
             // 
             // BAgregar
             // 
-            BAgregar.Location = new Point(197, 277);
+            BAgregar.Location = new Point(219, 324);
             BAgregar.Name = "BAgregar";
             BAgregar.Size = new Size(94, 37);
             BAgregar.TabIndex = 75;
@@ -651,6 +653,13 @@
             label26.Text = "EMPLEADO";
             label26.TextAlign = ContentAlignment.TopCenter;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(197, 260);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(294, 27);
+            dateTimePicker1.TabIndex = 109;
+            // 
             // Form_Empleado
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -738,5 +747,6 @@
         private TextBox txtBsalEmpleadoEli;
         private Label label19;
         private Label label18;
+        private DateTimePicker dateTimePicker1;
     }
 }

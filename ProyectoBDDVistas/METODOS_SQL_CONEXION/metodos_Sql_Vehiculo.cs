@@ -10,7 +10,7 @@ namespace ProyectoBDDVistas.METODOS_SQL_CONEXION
 {
     public class metodos_Sql_Vehiculo
     {
-        public string tabla = "VEHICULO_02";
+        public string tabla = "VISTA_VEHICULO";
 
         public void DesplegarDatosVehiculos(SqlConnection conexion, DataGridView dataGridView)
         {
